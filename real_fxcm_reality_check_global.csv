@@ -1,0 +1,4 @@
+expected_block_length,observations,models_compared,bootstrap_samples,observed_max_t,reality_check_p_value,reject_global_null_5pct
+5,305,3,5000,0.35901859509265355,0.5000999800039992,False
+10,305,3,5000,0.35901859509265355,0.48830233953209357,False
+20,305,3,5000,0.35901859509265355,0.47170565886822635,False
