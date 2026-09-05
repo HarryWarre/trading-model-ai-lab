@@ -1,0 +1,2 @@
+pooled_net_positive,positive_years,positive_leave_one_out,bootstrap_probability_positive,double_cost_positive,median_phase_return,median_phase_positive,preregistered_hypothesis_supported
+True,2,3,0.8058,True,0.013111695631869869,True,False
