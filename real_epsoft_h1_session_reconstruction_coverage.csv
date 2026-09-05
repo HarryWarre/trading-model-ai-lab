@@ -1,0 +1,7 @@
+session_rule,asset,first_session,last_session,valid_sessions,median_active_hours,minimum_active_hours,holdout_valid_sessions,holdout_max_calendar_gap_days,holdout_gaps_over_7_days
+new_york_17,EURUSD,2007-01-01,2023-02-27,3435,24.0,20,455,17.0,3
+new_york_17,USDJPY,2007-01-01,2023-02-27,3435,24.0,20,455,17.0,3
+new_york_00,EURUSD,2007-01-01,2023-02-28,2704,24.0,20,351,28.0,6
+new_york_00,USDJPY,2007-01-01,2023-02-28,2704,24.0,20,351,28.0,6
+utc_00,EURUSD,2007-01-02,2023-02-28,3417,24.0,20,451,17.0,3
+utc_00,USDJPY,2007-01-02,2023-02-28,3417,24.0,20,451,17.0,3
