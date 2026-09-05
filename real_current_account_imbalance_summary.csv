@@ -1,0 +1,2 @@
+status,pnl_calculated,reason,silent_substitution_used,hypothesis_supported
+blocked_before_pnl,False,"Missing preregistered World Bank observations: 2022:EUR, 2023:EUR",False,False
