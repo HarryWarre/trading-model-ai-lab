@@ -1,0 +1,2 @@
+bootstrap_samples,expected_block_sessions,probability_mean_positive,annualized_mean_ci_low,annualized_mean_ci_high
+5000,20.0,0.6624,-0.07232879822336433,0.11053082099290891
