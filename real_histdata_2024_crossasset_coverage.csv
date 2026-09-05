@@ -1,0 +1,8 @@
+asset,status,valid_asset_sessions,median_minutes,minimum_minutes,identical_duplicate_timestamps_removed,blocker,valid_common_sessions
+EURUSD,available,260.0,1435.0,1319.0,0,,
+USDJPY,available,260.0,1436.0,1080.0,60,,
+GBPUSD,available,260.0,1434.5,1255.0,60,,
+AUDUSD,available,260.0,1433.0,1075.0,60,,
+XAUUSD,available,259.0,1380.0,1140.0,60,,
+SPXUSD,available,258.0,1308.0,1008.0,60,,
+WTIUSD,blocked,,,,0,HistData 2024 ASCII M1 page returned an empty download token,0.0
