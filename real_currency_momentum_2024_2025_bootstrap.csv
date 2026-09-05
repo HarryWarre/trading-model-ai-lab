@@ -1,0 +1,2 @@
+samples,expected_block_sessions,probability_mean_positive,annualized_mean_ci_low,annualized_mean_ci_high
+5000,10,0.8058,-0.034295390786094976,0.08840006472361482
