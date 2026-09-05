@@ -1,0 +1,2 @@
+data_status,sessions_total,active_return_sessions,price_start,price_end,formation_sessions,holding_sessions,primary_rebalances,capacity_quantifiable,source_2024,truncated_extracted_gbpusd_2024_excluded
+new_hypothesis_reused_sample,519,496,2024-01-01,2025-12-30,21,21,24,False,hash-locked ZIP members,True
