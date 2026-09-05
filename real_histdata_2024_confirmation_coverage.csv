@@ -1,0 +1,7 @@
+session_close_est,asset,first_session,last_session,valid_sessions,median_minutes,minimum_minutes,identical_duplicate_timestamps_removed
+16,EURUSD,2024-01-01,2024-12-30,260,1433.0,1260,0
+16,USDJPY,2024-01-01,2024-12-30,260,1435.0,1137,60
+17,EURUSD,2024-01-01,2024-12-30,260,1435.0,1319,0
+17,USDJPY,2024-01-01,2024-12-30,260,1436.0,1080,60
+18,EURUSD,2024-01-01,2024-12-30,260,1433.0,1260,0
+18,USDJPY,2024-01-01,2024-12-30,260,1435.0,1020,60
