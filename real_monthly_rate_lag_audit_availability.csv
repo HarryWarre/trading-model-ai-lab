@@ -1,0 +1,2 @@
+example_observation_month,historical_m_plus_2_effective,corrected_m_plus_3_effective,complete_intervening_months_old,complete_intervening_months_corrected,input_type
+2024-01-01,2024-03-01,2024-04-01,1,2,"FRED current-history, not vintage"
