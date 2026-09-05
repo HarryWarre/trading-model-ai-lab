@@ -27,13 +27,21 @@ def data():
         f[(c,'carry')]=carry; f[(c,'value')]=vv[c]; f[(c,'stress')]=stress
         f[(c,'momentum_stress')]=f[(c,'momentum')]*stress
         f[(c,'carry_stress')]=carry*stress; f[(c,'value_stress')]=vv[c]*stress
+    f.columns=pd.MultiIndex.from_tuples(f.columns)
     return o,rates,f
 
 def target(o,rates):
     p=base.currency_prices(o); days=((o.index.to_series().shift(-1)-o.index.to_series()).dt.total_seconds()/86400)
     y=pd.DataFrame(index=o.index,columns=CURRENCIES,dtype=float)
-    for c in CURRENCIES: y[c]=np.log(p[c].shift(-H)/p[c]) + rates[c].rolling(H).sum().shift(-H+1)*days.rolling(H).sum().shift(-H+1)/365
+    for c in CURRENCIES:
+        daily_carry=rates[c]*days/365
+        y[c]=np.log(p[c].shift(-H)/p[c]) + daily_carry.rolling(H).sum().shift(-H+1)
     return y
+
+def trade_fee(currency, weight, row):
+    asset=base.CURRENCY_TO_ASSET[currency]
+    pip=.01 if asset.endswith('JPY') else .0001
+    return abs(weight)*4.4*pip/row[asset]
 
 def run_model(o,rates,f,features=FEATURES,offset=0,currencies=CURRENCIES):
     y=target(o,rates); out=pd.Series(0.,index=o.index); audit=[]
@@ -56,7 +64,7 @@ def run_model(o,rates,f,features=FEATURES,offset=0,currencies=CURRENCIES):
         for j in range(pos+1,min(pos+1+H,len(o)-1)):
             gross=sum(w[c]*(np.log(base.currency_prices(o).iloc[j+1][c]/base.currency_prices(o).iloc[j][c])+rates.iloc[j][c]*(o.index[j+1]-o.index[j]).total_seconds()/86400/365) for c in currencies)
             # 4.4 pip synthetic spread on entry and exit, scaled by each leg's price.
-            fee=sum(abs(w[c])*4.4*(.01 if c=='JPY' else .0001)/base.currency_prices(o).iloc[j][c] for c in currencies)
+            fee=sum(trade_fee(c,w[c],o.iloc[j]) for c in currencies)
             out.iloc[j]=gross-fee if j==pos+1 or j==min(pos+H,len(o)-2) else gross
         audit.append({'decision':o.index[pos],'winner':cur[-1][0],'loser':cur[0][0],'train_rows':len(rows)})
     return out[out!=0],pd.DataFrame(audit)
@@ -67,7 +75,10 @@ def baseline(o,rates,f,offset=0):
         z=s.iloc[pos].dropna(); order=z.sort_values();
         if len(order)<2: continue
         w={c:0 for c in CURRENCIES}; w[order.index[0]]=-.5; w[order.index[-1]]=.5
-        for j in range(pos+1,min(pos+1+H,len(o)-1)): out.iloc[j]=sum(w[c]*(np.log(p.iloc[j+1][c]/p.iloc[j][c])+rates.iloc[j][c]*(o.index[j+1]-o.index[j]).total_seconds()/86400/365) for c in CURRENCIES)
+        for j in range(pos+1,min(pos+1+H,len(o)-1)):
+            gross=sum(w[c]*(np.log(p.iloc[j+1][c]/p.iloc[j][c])+rates.iloc[j][c]*(o.index[j+1]-o.index[j]).total_seconds()/86400/365) for c in CURRENCIES)
+            fee=sum(trade_fee(c,w[c],o.iloc[j]) for c in CURRENCIES)
+            out.iloc[j]=gross-fee if j==pos+1 or j==min(pos+H,len(o)-2) else gross
     return out[out!=0]
 
 def cost_net(gross,o):
@@ -76,14 +87,20 @@ def cost_net(gross,o):
 
 def main():
     o,r,f=data(); results=[]
-    for name,fs in [('price_only',['momentum']),('price_carry',['momentum','carry']),('price_carry_value',['momentum','carry','value']),('full',FEATURES)]:
+    full=None
+    for name,fs in [('full',FEATURES)]:
         g,a=run_model(o,r,f,fs); b=base.baseline if False else None
         # 1,000 fixed-seed draws keeps this runnable in the constrained lab worker;
         # the primary point estimate and all time splits remain unchanged.
         idx=stationary_indices(len(g),1000,10,30030)
         results.append({'model':name,**metrics(g),'mean_positive_bootstrap':float((g.to_numpy()[idx].mean(1)>0).mean()),'bootstrap_samples':1000,'decisions':len(a)})
         a.to_csv(f'real_multifactor_fx_2024_2025_{name}_audit.csv',index=False)
-    full,_=run_model(o,r,f); price=baseline(o,r,f)
+        if name=='full': full=g
+    price=baseline(o,r,f)
+    full.rename('net_log_return').to_csv('real_multifactor_fx_2024_2025_returns.csv')
+    pd.DataFrame([{'year':int(year),**metrics(sample)} for year,sample in full.groupby(full.index.year)]).to_csv('real_multifactor_fx_2024_2025_annual.csv',index=False)
+    vx=crash.align_vix(full.index); high=vx.lagged_vix>vx.threshold_75
+    pd.DataFrame([{'regime':'low_vix',**metrics(full[~high])},{'regime':'high_vix',**metrics(full[high])}]).to_csv('real_multifactor_fx_2024_2025_regimes.csv',index=False)
     pd.DataFrame(results).to_csv('real_multifactor_fx_2024_2025_results.csv',index=False)
     n=min(len(full),len(price)); fi=full.iloc[:n].to_numpy(); pi=price.reindex(full.index).fillna(0).iloc[:n].to_numpy(); idx=stationary_indices(n,1000,10,30031)
     pd.DataFrame([{'comparison':'full_minus_price','paired_bootstrap_probability_positive':float(((fi[idx]-pi[idx]).mean(1)>0).mean()),'bootstrap_samples':1000}]).to_csv('real_multifactor_fx_2024_2025_paired.csv',index=False)
