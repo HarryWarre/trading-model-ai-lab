@@ -1,0 +1,2 @@
+observations,start,end,net_total_return,net_sharpe,max_drawdown,gross_total_return,cost_drag_log_return,annualized_turnover
+258,2024-01-01,2024-12-30,-0.03288121237047181,-0.593572525793253,-0.05796399988023693,-0.027177503845960405,0.005880306798376513,11.232558139534884
