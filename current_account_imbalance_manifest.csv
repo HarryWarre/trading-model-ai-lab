@@ -1,0 +1,3 @@
+file,sha256,source_url,source_last_updated,retrieved_utc
+world_bank_current_account.zip,5f20b759b6f56162d9d733df58803aaef8ec47a10c13db257c74f23d9172e83f,https://api.worldbank.org/v2/en/indicator/BN.CAB.XOKA.GD.ZS?downloadformat=csv,2026-07-13,2026-09-05
+API_BN.CAB.XOKA.GD.ZS_DS2_en_csv_v2_33256.csv,b03e63f156ae136742a0c1457c5990be0522f367acec3c7dae587cc7f8ef113c,https://api.worldbank.org/v2/en/indicator/BN.CAB.XOKA.GD.ZS?downloadformat=csv,2026-07-13,2026-09-05
