@@ -1,0 +1,3 @@
+period,samples,expected_block_sessions,probability_mean_positive,annualized_mean_ci_low,annualized_mean_ci_high
+2024_primary,5000,10,0.0498,-0.1535931395845325,0.01663718015341934
+2024_2025_descriptive,5000,10,0.12,-0.08316689777197814,0.023203686506341456
