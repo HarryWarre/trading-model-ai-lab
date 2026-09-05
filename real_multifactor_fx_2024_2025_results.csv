@@ -1,0 +1,2 @@
+model,observations,total_return,annualized_mean,sharpe,max_drawdown,mean_positive_bootstrap,bootstrap_samples,decisions
+full,365,-0.07526742924734142,-0.05402513804002697,-1.1883919262673055,-0.12170254441936323,0.083,1000,73
