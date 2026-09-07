@@ -1,0 +1,2 @@
+observations,decisions,pooled_oos_r2,median_rank_correlation,mean_winner_minus_loser,bootstrap_probability_spread_positive,bootstrap_samples,both_year_spreads_positive
+292,73,0.03365562190210214,0.0,-0.0014990478250847567,0.176,1000,False
