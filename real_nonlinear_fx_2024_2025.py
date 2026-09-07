@@ -29,7 +29,11 @@ def run_model(o,rates,f,offset=0,currencies=linear.CURRENCIES,cost_multiplier=1.
             gross=sum(w[c]*(np.log(p.iloc[j+1][c]/p.iloc[j][c])+rates.iloc[j][c]*(o.index[j+1]-o.index[j]).total_seconds()/86400/365) for c in currencies)
             fee=sum(linear.trade_fee(c,w[c],o.iloc[j]) for c in currencies)*cost_multiplier
             out.iloc[j]=gross-fee if j==pos+1 or j==end-1 else gross
-        audit.append({'decision':o.index[pos],'winner':pred[-1][0],'loser':pred[0][0],'train_rows':len(rows)})
+        for c,prediction in pred:
+            audit.append({'decision':o.index[pos],'currency':c,'prediction':prediction,
+                          'realized_five_session_return':y.iloc[pos][c],
+                          'winner':pred[-1][0],'loser':pred[0][0],
+                          'train_rows':len(rows)})
     return out[out!=0],pd.DataFrame(audit)
 
 def bootstrap_prob(x,seed):
@@ -38,7 +42,7 @@ def bootstrap_prob(x,seed):
 
 def main():
     o,r,f=linear.data(); net,audit=run_model(o,r,f)
-    rows=[{'model':'nonlinear_full',**linear.metrics(net),'bootstrap_probability_positive':bootstrap_prob(net,SEED),'bootstrap_samples':1000,'decisions':len(audit)}]
+    rows=[{'model':'nonlinear_full',**linear.metrics(net),'bootstrap_probability_positive':bootstrap_prob(net,SEED),'bootstrap_samples':1000,'decisions':audit.decision.nunique()}]
     annual=pd.DataFrame([{'year':int(y),**linear.metrics(s)} for y,s in net.groupby(net.index.year)])
     pd.DataFrame(rows).to_csv('real_nonlinear_fx_2024_2025_results.csv',index=False)
     annual.to_csv('real_nonlinear_fx_2024_2025_annual.csv',index=False); audit.to_csv('real_nonlinear_fx_2024_2025_audit.csv',index=False)
