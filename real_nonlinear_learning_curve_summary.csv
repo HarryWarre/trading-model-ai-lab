@@ -1,0 +1,2 @@
+first_half_mean_spread,second_half_mean_spread,second_minus_first,bootstrap_probability_improvement,final_quartile_median_rank,final_quartile_mean_spread,hypothesis_supported,bootstrap_samples
+-0.004353340547672205,0.0010824148757522445,0.00543575542342445,0.995,0.0,0.001183152070019272,False,1000
