@@ -1,0 +1,5 @@
+pair,year,status,zip_members,csv_member,rows,sha256,local_archive_saved,notes
+NSXUSD,2024,stream_validated,2,DAT_ASCII_NSXUSD_M1_2024.csv,340986,70429c487544991e42d34ce505be00b2d02b74a6633b23ca07eba0f80bf24566,no,"HistData symbol for NAS100"
+GRXEUR,2024,stream_validated,2,DAT_ASCII_GRXEUR_M1_2024.csv,332498,19c80d71914a2d834a22a2a5330911c7cfbc9176fc61a1440e5bde608245356d,no,"HistData symbol for GER40"
+UKXGBP,2024,stream_validated,2,DAT_ASCII_UKXGBP_M1_2024.csv,333319,bb4e97c2a29748b8af62523a4179731c5bc023cbebc6c7988ec3e083176fcd6c,no,"HistData symbol for UK100"
+BCOUSD,2024,stream_validated,2,DAT_ASCII_BCOUSD_M1_2024.csv,318193,886ee02b605ab11a4520127a2ffa55eab72171bf565007bb137ac63ad4c64255,no,"Brent proxy; WTIUSD did not return a token"
