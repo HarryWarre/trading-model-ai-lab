@@ -1,8 +1,8 @@
-"""Fail-closed preparation stage for the Colab intraday runner.
+"""Fail-closed preparation for wide or long intraday CSV panels.
 
-Expected input is one or more CSV files listed in QUANT_RAW_FILES, separated by
-semicolons. The stage validates existence, hashes the inputs, checks the
-minimum panel shape, and writes a normalized panel plus a manifest.
+The current Drive file is wide:
+timestamp,AUDUSD,EURUSD,...,XAUUSD
+This stage also accepts long data with asset/symbol and close/price columns.
 """
 from __future__ import annotations
 
@@ -41,64 +41,85 @@ def choose_column(columns, names):
     return None
 
 
+def normalize(frame: pd.DataFrame, path: Path) -> pd.DataFrame:
+    if frame.empty:
+        raise SystemExit(f"Empty raw file: {path}")
+    time_col = choose_column(frame.columns, ["timestamp", "datetime", "date", "time"])
+    if time_col is None:
+        raise SystemExit(f"{path} has no timestamp column.")
+
+    asset_col = choose_column(frame.columns, ["asset", "symbol", "ticker", "instrument"])
+    close_col = choose_column(frame.columns, ["close", "price", "mid", "bidclose"])
+
+    if asset_col is not None and close_col is not None:
+        out = frame.rename(
+            columns={time_col: "timestamp", asset_col: "asset", close_col: "close"}
+        )[["timestamp", "asset", "close"]].copy()
+    else:
+        # Wide panel: one price column per asset.
+        value_cols = [c for c in frame.columns if c != time_col]
+        if len(value_cols) < 2:
+            raise SystemExit(
+                f"{path} is neither a long panel nor a wide multi-asset panel."
+            )
+        out = frame.rename(columns={time_col: "timestamp"}).melt(
+            id_vars=["timestamp"], value_vars=value_cols,
+            var_name="asset", value_name="close"
+        )
+
+    out["timestamp"] = pd.to_datetime(out["timestamp"], utc=True, errors="coerce")
+    out["asset"] = out["asset"].astype(str).str.strip()
+    out["close"] = pd.to_numeric(out["close"], errors="coerce")
+    return out.dropna(subset=["timestamp", "asset", "close"])
+
+
 def main() -> None:
-    paths = raw_paths()
     frames = []
     file_manifest = []
-    for path in paths:
-        frame = pd.read_csv(path)
-        if frame.empty:
-            raise SystemExit(f"Empty raw file: {path}")
-        time_col = choose_column(frame.columns, ["timestamp", "datetime", "date", "time"])
-        asset_col = choose_column(frame.columns, ["asset", "symbol", "ticker", "instrument"])
-        close_col = choose_column(frame.columns, ["close", "price", "mid", "bidclose"])
-        if not all([time_col, asset_col, close_col]):
-            raise SystemExit(
-                f"{path} must contain time, asset/symbol, and close/price columns; "
-                f"found {list(frame.columns)}"
-            )
-        frame = frame.rename(
-            columns={time_col: "timestamp", asset_col: "asset", close_col: "close"}
-        )
-        frame["timestamp"] = pd.to_datetime(frame["timestamp"], utc=True, errors="coerce")
-        frame["asset"] = frame["asset"].astype(str).str.strip()
-        frame["close"] = pd.to_numeric(frame["close"], errors="coerce")
-        frame = frame.dropna(subset=["timestamp", "asset", "close"])
-        frames.append(frame[["timestamp", "asset", "close"]])
-        file_manifest.append(
-            {
-                "path": str(path),
-                "bytes": path.stat().st_size,
-                "sha256": sha256(path),
-                "rows_after_basic_parse": int(len(frame)),
-            }
-        )
+    for path in raw_paths():
+        raw = pd.read_csv(path)
+        parsed = normalize(raw, path)
+        frames.append(parsed)
+        file_manifest.append({
+            "path": str(path),
+            "bytes": path.stat().st_size,
+            "sha256": sha256(path),
+            "rows_after_parse": int(len(parsed)),
+        })
 
     panel = pd.concat(frames, ignore_index=True)
-    panel = panel.drop_duplicates(["timestamp", "asset"]).sort_values(["timestamp", "asset"])
+    panel = panel.drop_duplicates(["timestamp", "asset"]).sort_values(
+        ["timestamp", "asset"]
+    )
     asset_count = int(panel["asset"].nunique())
-    if asset_count < int(os.environ.get("QUANT_MIN_ASSETS", "15")):
-        raise SystemExit(
-            f"Validated panel has only {asset_count} assets; "
-            f"minimum is {os.environ.get('QUANT_MIN_ASSETS', '15')}."
-        )
-    if len(panel) < int(os.environ.get("QUANT_MIN_ROWS", "10000")):
-        raise SystemExit(f"Validated panel has only {len(panel)} rows; refusing to continue.")
+    min_assets = int(os.environ.get("QUANT_MIN_ASSETS", "15"))
+    min_rows = int(os.environ.get("QUANT_MIN_ROWS", "10000"))
+    if asset_count < min_assets:
+        raise SystemExit(f"Validated panel has {asset_count} assets; minimum is {min_assets}.")
+    if len(panel) < min_rows:
+        raise SystemExit(f"Validated panel has {len(panel)} rows; minimum is {min_rows}.")
 
-    root = Path(os.environ.get("QUANT_DRIVE_ROOT", "/content/drive/MyDrive/trading-model-ai-lab"))
-    output = Path(os.environ.get("QUANT_PANEL_OUTPUT", root / "data" / "prepared_intraday_panel.csv"))
+    root = Path(os.environ.get(
+        "QUANT_DRIVE_ROOT", "/content/drive/MyDrive/trading-model-ai-lab"
+    ))
+    output = Path(os.environ.get(
+        "QUANT_PANEL_OUTPUT", root / "data" / "prepared_intraday_panel.csv"
+    ))
     output.parent.mkdir(parents=True, exist_ok=True)
     panel.to_csv(output, index=False)
 
     manifest = {
         "stage": "prepare",
         "input_files": file_manifest,
+        "input_format": "wide_or_long_csv",
         "output": {
             "path": str(output),
             "bytes": output.stat().st_size,
             "sha256": sha256(output),
             "rows": int(len(panel)),
             "assets": asset_count,
+            "asset_names": sorted(panel["asset"].unique().tolist()),
+            "timezone": "UTC",
             "min_timestamp": panel["timestamp"].min().isoformat(),
             "max_timestamp": panel["timestamp"].max().isoformat(),
         },
