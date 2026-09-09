@@ -1,0 +1,2 @@
+model,observations,total_return,sharpe,max_drawdown,bootstrap_p_mean_positive,positioning_assets,period
+ridge_vix_cftc,305,-0.086153,-1.1100,-0.112817,0.1130,8,2024-01-01_to_2024-12-31
