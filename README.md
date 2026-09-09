@@ -39,3 +39,29 @@ python3 src/multitimeframe_round1.py
 ## Research standards
 
 All models must document data provenance, timestamp alignment, execution lag, spread, slippage, funding, rollover, leverage, margin, out-of-sample design, robustness checks and failure modes. Backtest returns must not be treated as a promise of future performance.
+
+
+## Current roadmap: 15+ international CFD assets
+
+The four-currency experiments in Research 030–033 were a validated pilot, not the intended final universe. The next mainline research round is Research 034 ([issue #47](https://github.com/HarryWarre/trading-model-ai-lab/issues/47)).
+
+### Minimum research universe
+
+- FX: EURUSD, GBPUSD, AUDUSD, NZDUSD, USDJPY, USDCHF, USDCAD, EURJPY
+- Metals: XAUUSD, XAGUSD
+- Equity indices: SPXUSD, NAS100USD, GER40, UK100
+- Energy: WTIUSD, BRENTUSD
+
+Optional assets such as HK50, FRA40, JP225 and copper will be added only after source and session QA. The final asset list is frozen before model fitting. Missing data is recorded as missing; it is never silently replaced with another asset.
+
+### Model improvements
+
+The next model family will forecast comparable future returns across assets and may choose no trade. A position is allowed only when predicted benefit is larger than a pre-registered estimate of spread, slippage, funding and model uncertainty. Results will be compared with equal-risk, price-only, linear multi-input and fixed nonlinear baselines.
+
+The inputs will be separated into economically meaningful layers: price/volatility, carry or rollover, futures volume/open interest, CFTC positioning where available, macro release data with publication lags, and liquidity/cost conditions. More variables are not automatically better; each layer must have a mechanism and a data-quality test.
+
+### Required validation gates
+
+Every 15+ asset experiment must include an untouched time block after model lock, overlapping-label leakage controls, 0x/1x/2x/4x cost stress, slippage/funding stress, leave-one-asset-out and leave-one-family-out tests, regime and phase checks, bootstrap/multiple-testing controls, and a capacity statement. If executable depth or ADV is unavailable, capacity is explicitly marked unquantifiable.
+
+No model becomes a candidate merely because it has positive backtest return. The all-pass criteria and failure status are recorded in the relevant issue and research note.
