@@ -1,0 +1,6 @@
+pair,year,status,zip_header,sha256,local_archive_saved,notes
+NZDUSD,2024,download_probe_ok,PK0304,94462ccf8ee9d1a23a1c14d4824565c07a5a20c9d97f29896c05d9ee80a2a5f5,no,"raw response streamed for hash probe; not persisted in current worker"
+USDCHF,2024,download_probe_ok,PK0304,a93db5099665b113e595b84639e8d3ede610059bab32a44765ebc4b8b8f90431,no,"raw response streamed for hash probe; not persisted in current worker"
+USDCAD,2024,download_probe_ok,PK0304,f2a1288cf8bfdde840d694cf62a84cb733edd7fc0efcd9607eb5ed0a9bbbcbce,no,"raw response streamed for hash probe; not persisted in current worker"
+EURJPY,2024,download_probe_ok,PK0304,2f0e7bf0476ed825d0a359701a343f2c46cc6f61f4a50c60e862e71a01a3707a,no,"raw response streamed for hash probe; not persisted in current worker"
+XAGUSD,2024,download_probe_ok,PK0304,c7ed66529ef14931a5e3f296b873544f70e830aa544f9e62faca50889c80fd37,no,"raw response streamed for hash probe; not persisted in current worker"
