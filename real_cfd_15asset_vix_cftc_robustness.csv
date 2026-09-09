@@ -1,0 +1,11 @@
+test,case,observations,net_total_return,sharpe,max_drawdown
+cost_stress,0x_cost,305,0.064538,0.7747,-0.055209
+cost_stress,1x_locked_cost,305,-0.086153,-1.1100,-0.112817
+cost_stress,2x_locked_cost,305,-0.215513,-2.9122,-0.214691
+cost_stress,4x_locked_cost,305,-0.421891,-5.9344,-0.419569
+vix_regime,low_vix,227,-0.025304,-0.4532,-0.046845
+vix_regime,high_vix,76,-0.060896,-2.6353,-0.073189
+time_phase,phase_1,77,-0.011349,-0.6261,-0.047690
+time_phase,phase_2,76,-0.048034,-2.2031,-0.056496
+time_phase,phase_3,76,-0.008291,-0.3769,-0.037711
+time_phase,phase_4,76,-0.020905,-1.1483,-0.038007
