@@ -1,0 +1,6 @@
+pair,year,status,zip_members,csv_member,rows,first_row,local_archive_saved,notes
+NZDUSD,2024,stream_validated,2,DAT_ASCII_NZDUSD_M1_2024.csv,370386,"20240101 170400;0.631830;0.631870;0.631830;0.631870;0",no,"stream inspected; not persisted in current worker"
+USDCHF,2024,stream_validated,2,DAT_ASCII_USDCHF_M1_2024.csv,371034,"20240101 170400;0.839340;0.839700;0.839340;0.839510;0",no,"stream inspected; not persisted in current worker"
+USDCAD,2024,stream_validated,2,DAT_ASCII_USDCAD_M1_2024.csv,370944,"20240101 170400;1.322290;1.322290;1.322290;1.322290;0",no,"stream inspected; not persisted in current worker"
+EURJPY,2024,stream_validated,2,DAT_ASCII_EURJPY_M1_2024.csv,371531,"20240101 170600;155.555000;155.555000;155.555000;155.555000;0",no,"stream inspected; not persisted in current worker"
+XAGUSD,2024,stream_validated,2,DAT_ASCII_XAGUSD_M1_2024.csv,353379,"20240101 180400;23.805000;23.809000;23.768000;23.809000;0",no,"stream inspected; not persisted in current worker"
