@@ -1,0 +1,2 @@
+model,observations,net_return,annualized_mean,sharpe,max_drawdown,charged_cost_log,annual_turnover,cftc_nonzero_assets,decisions
+ridge_vix_cftc_rebuilt,305,0.04631932088829438,0.037410513055691944,0.5585380203092063,-0.05619875426925047,0.010046263232370155,38.006557377049185,8,61
