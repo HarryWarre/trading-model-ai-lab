@@ -1,0 +1,2 @@
+model,observations,total_return,sharpe,max_drawdown,bootstrap_p_mean_positive,decisions,assets,period
+ridge_multifactor_vix,305,-0.089805,-1.1362,-0.111931,0.1050,61,15,2024-01-01_to_2024-12-31
