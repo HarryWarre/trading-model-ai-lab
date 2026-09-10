@@ -16,7 +16,7 @@ import numpy as np
 import pandas as pd
 from sklearn.linear_model import Ridge
 from sklearn.pipeline import make_pipeline
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from sklearn.preprocessing import StandardScaler
 
 from news_event_schema import load_and_validate_events
 
@@ -146,7 +146,6 @@ def choose_weights(frame: pd.DataFrame, prediction: pd.Series) -> dict[str, floa
 def walk_forward(panel: pd.DataFrame) -> pd.DataFrame:
     event_times = panel[["event_id", "event_time"]].drop_duplicates().sort_values("event_time")
     decisions = []
-    previous = {a: 0.0 for a in ASSET_FAMILY}
     for event in event_times.itertuples():
         current = panel[panel.event_id == event.event_id].copy()
         train = panel[
@@ -171,9 +170,11 @@ def walk_forward(panel: pd.DataFrame) -> pd.DataFrame:
                 weights[a] * float(current.loc[current.asset == a, "realized"].iloc[0])
                 for a in ASSET_FAMILY
             )
-            turnover = sum(abs(weights[a] - previous[a]) for a in ASSET_FAMILY)
+            # Each event position is opened and liquidated inside the one-hour
+            # window. Turnover and cost therefore include both legs.
+            turnover = 2 * sum(abs(weights[a]) for a in ASSET_FAMILY)
             cost = sum(
-                COST_BPS[ASSET_FAMILY[a]] / 10000 * abs(weights[a] - previous[a])
+                COST_BPS[ASSET_FAMILY[a]] / 10000 * 2 * abs(weights[a])
                 for a in ASSET_FAMILY
             )
             decisions.append({
@@ -182,9 +183,7 @@ def walk_forward(panel: pd.DataFrame) -> pd.DataFrame:
                 "net_1x": gross - cost, "turnover": turnover,
                 "traded": int(any(weights.values())),
             })
-        # The event holding ends before the following event is considered.
-        # Liquidate explicitly; no overnight or cross-event holding is assumed.
-        previous = {a: 0.0 for a in ASSET_FAMILY}
+        # Each position is fully liquidated after its fixed event window.
     if not decisions:
         raise ValueError("Insufficient non-overlapping prior events for walk-forward fit.")
     return pd.DataFrame(decisions)
