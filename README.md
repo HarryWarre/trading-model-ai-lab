@@ -91,3 +91,16 @@ The first runner test suite is `test_quant_core_backtest.py`. It checks next-bar
 ### Baseline and cost stress
 
 The core now includes a locked price-only trailing-momentum baseline and a helper that runs the same strategy at pre-declared cost levels. This baseline is a comparator, not the research contribution. Every future multi-input strategy must report whether it adds value over this baseline under the same execution rules.
+
+
+Command-line baseline runner:
+
+```bash
+python -m quant_core.run_baseline \
+  --panel data/prepared_panel.csv \
+  --output results/price_only_cost_stress.csv \
+  --min-assets 15 \
+  --costs 0,0.0001,0.0002,0.0004
+```
+
+The cost numbers are deliberately passed by the research specification. They are not silently assumed to mean the same monetary amount for every CFD family.
