@@ -120,3 +120,68 @@ def run_cross_sectional(
     weights_frame = pd.DataFrame(weight_rows)
     weights_frame.index.name = "decision_timestamp"
     return BacktestResult(pd.DataFrame(decision_rows), weights_frame)
+ContextSignal = Callable[[pd.DataFrame, pd.DataFrame], pd.Series]
+
+
+def _wide_context(context: pd.DataFrame) -> pd.DataFrame:
+    if "timestamp" not in context.columns:
+        raise ValueError("context needs a timestamp column")
+    data = context.copy()
+    data["timestamp"] = pd.to_datetime(data["timestamp"], utc=True, errors="raise")
+    if data.duplicated("timestamp").any():
+        raise ValueError("context contains duplicate timestamps")
+    data = data.sort_values("timestamp").set_index("timestamp")
+    return data
+
+
+def run_cross_sectional_with_context(
+    panel: pd.DataFrame,
+    context: pd.DataFrame,
+    signal: ContextSignal,
+    *,
+    one_way_cost: float = 0.0,
+    min_assets: int = 2,
+) -> BacktestResult:
+    """Run a strategy using prices plus only context known by each decision.
+
+    Context is a timestamped wide table (for example VIX, rates, or release
+    features). At decision time t the strategy receives context rows <= t.
+    No future context row is forward-filled into the past.
+    """
+    if one_way_cost < 0:
+        raise ValueError("one_way_cost cannot be negative")
+    prices = wide_prices(panel, min_assets=min_assets)
+    known = _wide_context(context)
+    assets = prices.columns
+    previous = pd.Series(0.0, index=assets)
+    decision_rows = []
+    weight_rows = []
+
+    for i in range(len(prices) - 1):
+        timestamp = prices.index[i]
+        history = prices.iloc[: i + 1].copy()
+        context_history = known.loc[known.index <= timestamp].copy()
+        raw = signal(history, context_history)
+        weights = normalise_targets(raw, assets)
+        next_timestamp = prices.index[i + 1]
+        next_return = np.log(prices.iloc[i + 1] / prices.iloc[i])
+        gross = float((weights * next_return).sum())
+        turnover = float((weights - previous).abs().sum())
+        cost = turnover * one_way_cost
+        decision_rows.append({
+            "decision_timestamp": timestamp,
+            "return_timestamp": next_timestamp,
+            "gross_log_return": gross,
+            "turnover": turnover,
+            "cost_log_return": cost,
+            "net_log_return": gross - cost,
+            "context_rows_available": int(len(context_history)),
+        })
+        weight_rows.append(weights.rename(timestamp))
+        previous = weights
+
+    if not decision_rows:
+        raise ValueError("at least two complete timestamps are required")
+    weights_frame = pd.DataFrame(weight_rows)
+    weights_frame.index.name = "decision_timestamp"
+    return BacktestResult(pd.DataFrame(decision_rows), weights_frame)
