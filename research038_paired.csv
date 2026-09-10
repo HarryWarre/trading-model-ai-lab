@@ -1,0 +1,3 @@
+comparison,mean_annualized,p_difference_positive,ci_mean_low,ci_mean_high
+nonlinear_minus_ridge,0.03556888985704128,0.705,-2.3524420233860633e-05,4.018723765411768e-05
+nonlinear_minus_price_only,0.02487458105335867,0.6505,-2.4693490081397216e-05,3.839559303379271e-05

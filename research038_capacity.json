@@ -1,0 +1,8 @@
+{
+  "mean_names_changed_per_decision": 5.516746411483253,
+  "median_names_changed_per_decision": 6.0,
+  "mean_one_way_turnover": 0.9199639898555916,
+  "decisions_per_active_day": 9.405,
+  "live_capacity_quantifiable": false,
+  "reason": "BID closes contain no ask, executable depth, broker volume, ADV or slippage curve"
+}

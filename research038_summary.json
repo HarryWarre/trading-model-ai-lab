@@ -1,0 +1,223 @@
+{
+  "models": {
+    "nonlinear": {
+      "n": 1881,
+      "total_return": -0.23187865095349047,
+      "annualized_mean": -0.5654822161811254,
+      "sharpe": -17.059289829707804,
+      "max_drawdown": -0.23187865095349047,
+      "bootstrap_p_positive": 0.0,
+      "bootstrap_ci_mean": [
+        -0.00016634549400222512,
+        -0.0001126758999631777
+      ],
+      "median_rank_ic": -0.007155646512351529,
+      "mean_turnover": 0.9199639898555916,
+      "active_fraction": 0.7644869750132908
+    },
+    "price_only": {
+      "n": 1881,
+      "total_return": -0.2407407469177567,
+      "annualized_mean": -0.5903567972344771,
+      "sharpe": -15.433546427270455,
+      "max_drawdown": -0.2407407469177567,
+      "bootstrap_p_positive": 0.0,
+      "bootstrap_ci_mean": [
+        -0.00017323755046264259,
+        -0.00011965791749254713
+      ],
+      "median_rank_ic": -0.010714285714285713,
+      "mean_turnover": 0.9631193766038687,
+      "active_fraction": 0.7634237107921319
+    },
+    "ridge": {
+      "n": 1881,
+      "total_return": -0.2445193229897228,
+      "annualized_mean": -0.6010511060381575,
+      "sharpe": -15.848148051146008,
+      "max_drawdown": -0.2445193229897228,
+      "bootstrap_p_positive": 0.0,
+      "bootstrap_ci_mean": [
+        -0.00017525699684606724,
+        -0.00012272255487710698
+      ],
+      "median_rank_ic": -0.002197802197802198,
+      "mean_turnover": 0.981408766030729,
+      "active_fraction": 0.772461456671983
+    }
+  },
+  "cost_stress": [
+    {
+      "model": "nonlinear",
+      "multiple": 0,
+      "n": 1881,
+      "total_return": -0.00901211447133099,
+      "annualized_mean": -0.019405407703082425,
+      "sharpe": -0.595826988183053,
+      "max_drawdown": -0.02504414563075652
+    },
+    {
+      "model": "nonlinear",
+      "multiple": 1,
+      "n": 1881,
+      "total_return": -0.23187865095349047,
+      "annualized_mean": -0.5654822161811254,
+      "sharpe": -17.059289829707804,
+      "max_drawdown": -0.23187865095349047
+    },
+    {
+      "model": "nonlinear",
+      "multiple": 2,
+      "n": 1881,
+      "total_return": -0.4046239964414168,
+      "annualized_mean": -1.1115590246591682,
+      "sharpe": -32.020507645017254,
+      "max_drawdown": -0.4046239964414168
+    },
+    {
+      "model": "nonlinear",
+      "multiple": 4,
+      "n": 1881,
+      "total_return": -0.642303815425264,
+      "annualized_mean": -2.203712641615254,
+      "sharpe": -54.71445005468038,
+      "max_drawdown": -0.642303815425264
+    },
+    {
+      "model": "price_only",
+      "multiple": 0,
+      "n": 1881,
+      "total_return": -0.010899754581296883,
+      "annualized_mean": -0.023492331419524327,
+      "sharpe": -0.6230215094907308,
+      "max_drawdown": -0.028822015761703845
+    },
+    {
+      "model": "price_only",
+      "multiple": 1,
+      "n": 1881,
+      "total_return": -0.2407407469177567,
+      "annualized_mean": -0.5903567972344771,
+      "sharpe": -15.433546427270455,
+      "max_drawdown": -0.2407407469177567
+    },
+    {
+      "model": "price_only",
+      "multiple": 2,
+      "n": 1881,
+      "total_return": -0.4171727122087867,
+      "annualized_mean": -1.1572212630494296,
+      "sharpe": -29.129882283032195,
+      "max_drawdown": -0.4171727122087867
+    },
+    {
+      "model": "price_only",
+      "multiple": 4,
+      "n": 1881,
+      "total_return": -0.6565690394199969,
+      "annualized_mean": -2.290950194679335,
+      "sharpe": -50.85864944501917,
+      "max_drawdown": -0.6565690394199969
+    },
+    {
+      "model": "ridge",
+      "multiple": 0,
+      "n": 1881,
+      "total_return": -0.01239019719550638,
+      "annualized_mean": -0.026724798384475543,
+      "sharpe": -0.715166594263736,
+      "max_drawdown": -0.028785313883049057
+    },
+    {
+      "model": "ridge",
+      "multiple": 1,
+      "n": 1881,
+      "total_return": -0.2445193229897228,
+      "annualized_mean": -0.6010511060381575,
+      "sharpe": -15.848148051146008,
+      "max_drawdown": -0.2445193229897228
+    },
+    {
+      "model": "ridge",
+      "multiple": 2,
+      "n": 1881,
+      "total_return": -0.42208850933318165,
+      "annualized_mean": -1.1753774136918393,
+      "sharpe": -29.807151731446016,
+      "max_drawdown": -0.42208850933318165
+    },
+    {
+      "model": "ridge",
+      "multiple": 4,
+      "n": 1881,
+      "total_return": -0.6618282948424129,
+      "annualized_mean": -2.3240300289992035,
+      "sharpe": -51.810982259381426,
+      "max_drawdown": -0.6618282948424129
+    }
+  ],
+  "segments": [
+    {
+      "model": "nonlinear",
+      "segment": "first_half",
+      "n": 946,
+      "total_return": -0.13539356281711112,
+      "annualized_mean": -0.6200621919472276,
+      "sharpe": -18.130640268550106,
+      "max_drawdown": -0.13559987509439153
+    },
+    {
+      "model": "nonlinear",
+      "segment": "second_half",
+      "n": 935,
+      "total_return": -0.11159422829507593,
+      "annualized_mean": -0.5102601230530689,
+      "sharpe": -15.92383400337753,
+      "max_drawdown": -0.11313807696504363
+    },
+    {
+      "model": "price_only",
+      "segment": "first_half",
+      "n": 946,
+      "total_return": -0.1485298159666979,
+      "annualized_mean": -0.6853155250325091,
+      "sharpe": -16.89737942274751,
+      "max_drawdown": -0.1499937597649742
+    },
+    {
+      "model": "price_only",
+      "segment": "second_half",
+      "n": 935,
+      "total_return": -0.10829613611866917,
+      "annualized_mean": -0.4942809079329388,
+      "sharpe": -13.835486716001176,
+      "max_drawdown": -0.11033719801377695
+    },
+    {
+      "model": "ridge",
+      "segment": "first_half",
+      "n": 946,
+      "total_return": -0.14429511863038724,
+      "annualized_mean": -0.6641706759275946,
+      "sharpe": -16.935082807146237,
+      "max_drawdown": -0.14435412536606773
+    },
+    {
+      "model": "ridge",
+      "segment": "second_half",
+      "n": 935,
+      "total_return": -0.11712473136640245,
+      "annualized_mean": -0.5371889529735507,
+      "sharpe": -14.69156343681859,
+      "max_drawdown": -0.11849363616911768
+    }
+  ],
+  "data": {
+    "price_sha256": "6f8f6995527e429dc60fd9dc372bae21ad458698c88a70a46f3e46aa27c9f8ef",
+    "vix_sha256": "6b2cd4028784f69ae160250c3c10dbce88150e125f5fdc18f0c8d43ae557d5a3",
+    "assets": 15,
+    "first": "2024-01-01 17:00:00+00:00",
+    "last": "2024-12-31 16:55:00+00:00",
+    "exploratory_reused_2024": true
+  }
+}
