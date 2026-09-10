@@ -81,7 +81,7 @@ def load_archive(path: Path, asset: str) -> pd.DataFrame:
     raw["asset"] = asset
     if raw.duplicated("timestamp").any():
         raise ValueError(f"{path} contains duplicate M1 timestamps")
-    return raw.loc[:, REQUIRED_COLUMNS].sort_values("timestamp")
+    return raw.loc[:, list(REQUIRED_COLUMNS)].sort_values("timestamp")
 
 
 def resample_5m(m1: pd.DataFrame) -> pd.DataFrame:
@@ -95,7 +95,7 @@ def resample_5m(m1: pd.DataFrame) -> pd.DataFrame:
         .to_frame()
     )
     out["asset"] = asset
-    return out.reset_index().loc[:, REQUIRED_COLUMNS]
+    return out.reset_index().loc[:, list(REQUIRED_COLUMNS)]
 
 
 def build_panel(raw_dir: Path, years: list[int], assets: list[str]) -> tuple[pd.DataFrame, list[dict]]:
