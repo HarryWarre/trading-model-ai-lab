@@ -126,6 +126,7 @@ def main() -> None:
         "r_5m", "r_30m", "r_120m", "vol_60m", "vol_120m",
         "breadth", "hour_sin", "hour_cos", "vix", "asset_code",
     ]
+    previous_weights = {a: 0.0 for a in prices.columns}
     for decision in decisions:
         decision = pd.Timestamp(decision)
         train = data[data["timestamp"] < decision]
@@ -164,14 +165,21 @@ def main() -> None:
             if weight == 0 or path[asset].dropna().shape[0] < 2:
                 continue
             gross += weight * np.log(path[asset].dropna().iloc[-1] / path[asset].dropna().iloc[0])
-        cost_bps = sum(abs(w) * family_bps(a) for a, w in weights.items())
+        # Charge only for target-weight changes, including the initial opening trade.
+        turnover = sum(abs(weights[a] - previous_weights[a]) for a in prices.columns)
+        cost_bps = sum(
+            family_bps(a) * abs(weights[a] - previous_weights[a])
+            for a in prices.columns
+        )
         net = gross - cost_bps / 10000
+        previous_weights = weights.copy()
         records.append({
             "decision": decision.isoformat(),
             "gross_log_return": float(gross),
             "cost_log_return": float(cost_bps / 10000),
             "net_log_return": float(net),
             "cost_bps_weighted": float(cost_bps),
+            "turnover": float(turnover),
             "assets_traded": int(len(chosen)),
             "trained_at": str(last_train_date),
         })
