@@ -9,7 +9,7 @@ from colab.prepare_histdata_m1_panel import load_archive, resample_5m
 
 def write_zip(path: Path, rows: list[str]) -> None:
     with ZipFile(path, "w") as archive:
-        archive.writestr("DAT_ASCII_EURUSD_M1_2023.csv", "\n".join(rows) + "\n")
+        archive.writestr("DAT_ASCII_EURUSD_M1_2023.txt", "\n".join(rows) + "\n")
 
 
 def test_histdata_parser_converts_fixed_est_to_utc(tmp_path):
