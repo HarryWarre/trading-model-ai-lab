@@ -109,3 +109,6 @@ The cost numbers are deliberately passed by the research specification. They are
 ### Multi-input context contract
 
 Strategies that use VIX, rates, macro releases or other external data can call `run_cross_sectional_with_context`. The context table is timestamped; at decision time (t), the strategy receives only rows with timestamp (le t). Duplicate context timestamps fail closed. This keeps the same lightweight runner usable for both price-only baselines and multi-source research.
+
+
+A pre-registered multi-input adapter is available in `quant_core/multi_input.py`. It combines a locked price lookback with explicitly supplied asset-specific context features such as `vix__EURUSD`. It does not fit weights automatically; coefficients must be declared before the test period.
