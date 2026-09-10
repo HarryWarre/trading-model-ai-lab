@@ -86,3 +86,8 @@ print(result.summary())
 ```
 
 The first runner test suite is `test_quant_core_backtest.py`. It checks next-bar execution, initial-turnover costs and duplicate-row rejection.
+
+
+### Baseline and cost stress
+
+The core now includes a locked price-only trailing-momentum baseline and a helper that runs the same strategy at pre-declared cost levels. This baseline is a comparator, not the research contribution. Every future multi-input strategy must report whether it adds value over this baseline under the same execution rules.
