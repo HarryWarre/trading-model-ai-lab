@@ -3,18 +3,23 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 
+import numpy as np
 import pandas as pd
 
 from .backtest import BacktestResult, SignalFunction, run_cross_sectional
 
 
 def trailing_momentum(history: pd.DataFrame, lookback: int = 12) -> pd.Series:
-    """Price-only baseline: rank recent log return, no future observations."""
+    """Price-only baseline: recent log return, no future observations."""
     if lookback < 1:
         raise ValueError("lookback must be positive")
     if len(history) <= lookback:
         return pd.Series(0.0, index=history.columns)
-    return (history.iloc[-1].apply(float).pipe(lambda x: x) / history.iloc[-lookback - 1].astype(float)).apply(lambda x: pd.NA if x <= 0 else x).astype("Float64").apply(lambda x: 0.0 if pd.isna(x) else __import__("math").log(float(x)))
+    latest = history.iloc[-1].astype(float)
+    old = history.iloc[-lookback - 1].astype(float)
+    if (latest <= 0).any() or (old <= 0).any():
+        raise ValueError("prices must be positive")
+    return pd.Series(np.log(latest / old), index=history.columns)
 
 
 def run_cost_stress(
