@@ -32,9 +32,10 @@ def test_resample_uses_observed_last_close_and_does_not_fill(tmp_path):
         "20230103 171000;1;1;1;1.10;10",
     ])
     five = resample_5m(load_archive(path, "EURUSD"))
-    assert five["close"].tolist() == [1.09, 1.10]
+    assert five["close"].tolist() == [1.05, 1.09, 1.10]
     assert five["timestamp"].tolist() == [
         pd.Timestamp("2023-01-03 22:00:00+00:00"),
+        pd.Timestamp("2023-01-03 22:05:00+00:00"),
         pd.Timestamp("2023-01-03 22:10:00+00:00"),
     ]
 
