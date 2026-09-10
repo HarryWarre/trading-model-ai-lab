@@ -65,3 +65,24 @@ The inputs will be separated into economically meaningful layers: price/volatili
 Every 15+ asset experiment must include an untouched time block after model lock, overlapping-label leakage controls, 0x/1x/2x/4x cost stress, slippage/funding stress, leave-one-asset-out and leave-one-family-out tests, regime and phase checks, bootstrap/multiple-testing controls, and a capacity statement. If executable depth or ADV is unavailable, capacity is explicitly marked unquantifiable.
 
 No model becomes a candidate merely because it has positive backtest return. The all-pass criteria and failure status are recorded in the relevant issue and research note.
+
+
+## Operating model: automatic research core
+
+Routine research does **not** require a Colab session.
+
+- `quant_core/` is the small reusable engine: it validates panels, gives a strategy only the prices available at each decision, applies weights on the next bar, records turnover and charges a documented comparable cost.
+- A new hypothesis only needs a small strategy module plus tests. The core makes the execution lag and no-look-ahead rule the default.
+- Google Drive holds large prepared panels and manifests. Colab is reserved for one-off raw-M1 conversion, large retraining or data acquisition—not for every research round.
+- A cross-asset “4 pip” assumption must be translated explicitly by each research wrapper; the generic engine refuses to pretend the same pip unit has the same value for FX, gold, oil and indices.
+
+Example:
+
+```python
+from quant_core import run_cross_sectional
+
+result = run_cross_sectional(panel, my_signal, one_way_cost=0.0001)
+print(result.summary())
+```
+
+The first runner test suite is `test_quant_core_backtest.py`. It checks next-bar execution, initial-turnover costs and duplicate-row rejection.
