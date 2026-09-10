@@ -44,7 +44,7 @@ def load_archive(path: Path, asset: str) -> pd.DataFrame:
     if path.read_bytes()[:4] != b"PK\x03\x04":
         raise ValueError(f"{path} is not a ZIP archive")
     with ZipFile(path) as archive:
-        members = [name for name in archive.namelist() if name.lower().endswith(".csv")]
+        members = [name for name in archive.namelist() if name.lower().endswith((".csv", ".txt"))]
         if len(members) != 1:
             raise ValueError(f"{path} must contain exactly one CSV member, found {members}")
         if archive.testzip():
