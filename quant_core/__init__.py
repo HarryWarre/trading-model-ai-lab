@@ -5,9 +5,11 @@ from .backtest import (
     run_cross_sectional_with_context,
     wide_prices,
 )
+from .multi_input import linear_price_context_signal
 from .strategies import run_cost_stress, trailing_momentum
 
 __all__ = [
     "BacktestResult", "run_cross_sectional", "run_cross_sectional_with_context",
     "wide_prices", "run_cost_stress", "trailing_momentum",
+    "linear_price_context_signal",
 ]
