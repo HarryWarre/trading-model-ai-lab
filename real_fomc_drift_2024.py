@@ -129,7 +129,7 @@ def placebo_windows(prices: pd.DataFrame, events: pd.DataFrame) -> pd.DataFrame:
             # Preserve the official 2 p.m. New York wall-clock time across DST.
             local_release = row.release_timestamp_utc.tz_convert("America/New_York")
             release = (local_release + pd.DateOffset(days=offset)).tz_convert("UTC")
-            candidate_start = release - WINDOW
+            candidate_start = release - END_LAG - WINDOW
             candidate_end = release - END_LAG
             if any(candidate_start <= t <= candidate_end for t in event_times):
                 continue
