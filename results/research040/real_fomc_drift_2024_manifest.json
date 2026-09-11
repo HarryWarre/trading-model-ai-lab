@@ -1,0 +1,24 @@
+{
+  "events": {
+    "bytes": 1166,
+    "path": "data/fomc_2024_official.csv",
+    "sha256": "991875afeea3029cd8a9d812685577d39c51220ef76c9cbd62bd454a5c22a552"
+  },
+  "panel": {
+    "bytes": 11477068,
+    "path": "data/cfd_intraday_5m_15_2024.csv",
+    "sha256": "6f8f6995527e429dc60fd9dc372bae21ad458698c88a70a46f3e46aa27c9f8ef"
+  },
+  "parameters": {
+    "bootstrap_draws": 10000,
+    "end_lag_hours": 3,
+    "max_staleness_minutes": 10,
+    "seed": 20260911,
+    "window_hours": 24
+  },
+  "vix": {
+    "bytes": 161103,
+    "path": "data/fred_VIXCLS.csv",
+    "sha256": "d189972fce09597c45f246711881ba8ab35acca9ad52b98027214c42bb01422c"
+  }
+}
