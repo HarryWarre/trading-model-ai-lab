@@ -112,3 +112,12 @@ Strategies that use VIX, rates, macro releases or other external data can call `
 
 
 A pre-registered multi-input adapter is available in `quant_core/multi_input.py`. It combines a locked price lookback with explicitly supplied asset-specific context features such as `vix__EURUSD`. It does not fit weights automatically; coefficients must be declared before the test period.
+
+## Living experiment queue
+
+1. **Research 039 — macro surprise reactions:** highest priority. Requires an immutable historical feed with actual, point-in-time consensus and official release time. Price runner and fail-closed schema are ready.
+2. **Research 040 — pre-FOMC drift replication:** completed on the frozen 2024 panel; positive sign but rejected because bootstrap and matched-control confidence gates failed. See issue #57 and `research/real_fomc_drift_2024.md`.
+3. **Research 040 confirmation:** rerun the unchanged event definition on the prepared 2023–2025 15-asset panel after that panel passes coverage QA. This expands eight events to 24 but is not an untouched holdout.
+4. **Later holdout:** reserve 2026+ events and prices for confirmation after the event model and data contract are locked.
+
+Current data status: 45 hash-locked HistData archives cover 15 assets for 2023–2025, but the combined multi-year 5-minute panel has not yet been written to Drive. The validated 2024 panel is available and was used for Research 040. Missing WTIUSD 2024–2025 does not block the 15-asset panel.
