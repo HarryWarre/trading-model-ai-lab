@@ -120,4 +120,8 @@ A pre-registered multi-input adapter is available in `quant_core/multi_input.py`
 3. **Research 040 confirmation:** rerun the unchanged event definition on the prepared 2023–2025 15-asset panel after that panel passes coverage QA. This expands eight events to 24 but is not an untouched holdout.
 4. **Later holdout:** reserve 2026+ events and prices for confirmation after the event model and data contract are locked.
 
+5. **Research 041 — post-FOMC cross-asset reaction:** completed exploratory on the 2024 15-column panel. The 5-minute reaction-following rule and expanding ridge model were both negative after the fixed 4-pip cost; see issue #58 and `research/real_post_fomc_multinput_2024.md`. It used 7 valid events and 14 assets after fail-closed timestamp checks. No alpha or production claim.
+
+Research 041 data note: the current workspace copy of the 2024 panel has SHA-256 `e632e54adb79e027e991bb335a917e9a7a30e16c6ddf33b0daecc9ceeae5d05c`, which differs from an older recorded hash. The current hash is frozen in the new runner and must be reconciled before treating historical results as a canonical replication.
+
 Current data status: 45 hash-locked HistData archives cover 15 assets for 2023–2025, but the combined multi-year 5-minute panel has not yet been written to Drive. The validated 2024 panel is available and was used for Research 040. Missing WTIUSD 2024–2025 does not block the 15-asset panel.
