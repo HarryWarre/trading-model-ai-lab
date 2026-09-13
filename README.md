@@ -125,3 +125,8 @@ A pre-registered multi-input adapter is available in `quant_core/multi_input.py`
 Research 041 data note: the current workspace copy of the 2024 panel has SHA-256 `e632e54adb79e027e991bb335a917e9a7a30e16c6ddf33b0daecc9ceeae5d05c`, which differs from an older recorded hash. The current hash is frozen in the new runner and must be reconciled before treating historical results as a canonical replication.
 
 Current data status: 45 hash-locked HistData archives cover 15 assets for 2023–2025, but the combined multi-year 5-minute panel has not yet been written to Drive. The validated 2024 panel is available and was used for Research 040. Missing WTIUSD 2024–2025 does not block the 15-asset panel.
+
+
+6. **Research 042 — BLS CPI/employment digestion:** completed exploratory on 22 usable 2024 announcements and all 15 panel assets. Continuation, reversal, equal-risk reversal and the expanding multi-input ridge model were all negative after the fixed 4-pip cost. Ridge returned -0.673% at 1x and failed all six gates; see issue #59 and `research/real_bls_event_reaction_2024.md`. The two December releases are absent because the local panel ends on 2024-12-05; no data were imputed.
+
+**Next highest-value work:** build the immutable 2023–2025 panel from the 45 existing raw archives and run frozen event confirmations. In parallel, Research 039 remains blocked on a point-in-time, timestamp-verifiable consensus archive; official BLS timestamps alone are available but do not identify the economic surprise.
