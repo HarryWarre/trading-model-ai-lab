@@ -1,0 +1,15 @@
+{
+  "event_source": "https://www.bls.gov/schedule/2024/home.htm",
+  "event_file": "data/bls_major_releases_2024.csv",
+  "event_file_sha256": "b94bc7ff54be403f543b7918161eeea3522ffa7b6f65146b32ca84da3a98dbbd",
+  "event_timezone": "America/New_York",
+  "official_events": 24,
+  "panel_assets": 15,
+  "panel_end_utc": "2024-12-05T04:20:00Z",
+  "panel_file": "data/cfd_intraday_5m_15_2024.csv",
+  "panel_file_sha256": "e632e54adb79e027e991bb335a917e9a7a30e16c6ddf33b0daecc9ceeae5d05c",
+  "panel_rows": 97481,
+  "usable_events": 22,
+  "vix_file": "data/fred_VIXCLS.csv",
+  "vix_file_sha256": "d189972fce09597c45f246711881ba8ab35acca9ad52b98027214c42bb01422c"
+}
