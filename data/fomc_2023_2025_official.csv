@@ -1,0 +1,25 @@
+event_id,release_timestamp_utc,release_timezone,release_time_local,source_url
+FOMC_2023_02_01,2023-02-01T19:00:00Z,EST,2023-02-01 14:00,https://www.federalreserve.gov/newsevents/pressreleases/monetary20230201a.htm
+FOMC_2023_03_22,2023-03-22T18:00:00Z,EDT,2023-03-22 14:00,https://www.federalreserve.gov/newsevents/pressreleases/monetary20230322a.htm
+FOMC_2023_05_03,2023-05-03T18:00:00Z,EDT,2023-05-03 14:00,https://www.federalreserve.gov/newsevents/pressreleases/monetary20230503a.htm
+FOMC_2023_06_14,2023-06-14T18:00:00Z,EDT,2023-06-14 14:00,https://www.federalreserve.gov/newsevents/pressreleases/monetary20230614a.htm
+FOMC_2023_07_26,2023-07-26T18:00:00Z,EDT,2023-07-26 14:00,https://www.federalreserve.gov/newsevents/pressreleases/monetary20230726a.htm
+FOMC_2023_09_20,2023-09-20T18:00:00Z,EDT,2023-09-20 14:00,https://www.federalreserve.gov/newsevents/pressreleases/monetary20230920a.htm
+FOMC_2023_11_01,2023-11-01T18:00:00Z,EDT,2023-11-01 14:00,https://www.federalreserve.gov/newsevents/pressreleases/monetary20231101a.htm
+FOMC_2023_12_13,2023-12-13T19:00:00Z,EST,2023-12-13 14:00,https://www.federalreserve.gov/newsevents/pressreleases/monetary20231213a.htm
+FOMC_2024_01_31,2024-01-31T19:00:00Z,EST,2024-01-31 14:00,https://www.federalreserve.gov/newsevents/pressreleases/monetary20240131a.htm
+FOMC_2024_03_20,2024-03-20T18:00:00Z,EDT,2024-03-20 14:00,https://www.federalreserve.gov/newsevents/pressreleases/monetary20240320a.htm
+FOMC_2024_05_01,2024-05-01T18:00:00Z,EDT,2024-05-01 14:00,https://www.federalreserve.gov/newsevents/pressreleases/monetary20240501a.htm
+FOMC_2024_06_12,2024-06-12T18:00:00Z,EDT,2024-06-12 14:00,https://www.federalreserve.gov/newsevents/pressreleases/monetary20240612a.htm
+FOMC_2024_07_31,2024-07-31T18:00:00Z,EDT,2024-07-31 14:00,https://www.federalreserve.gov/newsevents/pressreleases/monetary20240731a.htm
+FOMC_2024_09_18,2024-09-18T18:00:00Z,EDT,2024-09-18 14:00,https://www.federalreserve.gov/newsevents/pressreleases/monetary20240918a.htm
+FOMC_2024_11_07,2024-11-07T19:00:00Z,EST,2024-11-07 14:00,https://www.federalreserve.gov/newsevents/pressreleases/monetary20241107a.htm
+FOMC_2024_12_18,2024-12-18T19:00:00Z,EST,2024-12-18 14:00,https://www.federalreserve.gov/newsevents/pressreleases/monetary20241218a.htm
+FOMC_2025_01_29,2025-01-29T19:00:00Z,EST,2025-01-29 14:00,https://www.federalreserve.gov/newsevents/pressreleases/monetary20250129a.htm
+FOMC_2025_03_19,2025-03-19T18:00:00Z,EDT,2025-03-19 14:00,https://www.federalreserve.gov/newsevents/pressreleases/monetary20250319a.htm
+FOMC_2025_05_07,2025-05-07T18:00:00Z,EDT,2025-05-07 14:00,https://www.federalreserve.gov/newsevents/pressreleases/monetary20250507a.htm
+FOMC_2025_06_18,2025-06-18T18:00:00Z,EDT,2025-06-18 14:00,https://www.federalreserve.gov/newsevents/pressreleases/monetary20250618a.htm
+FOMC_2025_07_30,2025-07-30T18:00:00Z,EDT,2025-07-30 14:00,https://www.federalreserve.gov/newsevents/pressreleases/monetary20250730a.htm
+FOMC_2025_09_17,2025-09-17T18:00:00Z,EDT,2025-09-17 14:00,https://www.federalreserve.gov/newsevents/pressreleases/monetary20250917a.htm
+FOMC_2025_10_29,2025-10-29T18:00:00Z,EDT,2025-10-29 14:00,https://www.federalreserve.gov/newsevents/pressreleases/monetary20251029a.htm
+FOMC_2025_12_10,2025-12-10T19:00:00Z,EST,2025-12-10 14:00,https://www.federalreserve.gov/newsevents/pressreleases/monetary20251210a.htm
