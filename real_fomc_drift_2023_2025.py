@@ -157,8 +157,8 @@ def write_partial_event_checkpoint(
         "panel_rows": int(json.loads(panel_manifest_path.read_text(encoding="utf-8"))["output"]["rows"]),
         "panel_assets": int(json.loads(panel_manifest_path.read_text(encoding="utf-8"))["output"]["asset_count"]),
         "events": int(len(event_1x)),
-        "round_trips": int(detail["event_id"].nunique()),
-        "trade_legs": int(2 * detail["event_id"].nunique()),
+        "round_trips": int(len(detail)),
+        "trade_legs": int(2 * len(detail)),
         "costs": cost_rows,
         "yearly_net_returns": {
             str(int(row.year)): float(row.net_return)
