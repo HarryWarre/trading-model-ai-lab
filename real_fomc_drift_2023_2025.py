@@ -100,6 +100,91 @@ def placebo_windows_multiyear(prices: pd.DataFrame, events: pd.DataFrame) -> pd.
     return out
 
 
+def write_partial_event_checkpoint(
+    detail: pd.DataFrame,
+    panel_path: Path,
+    panel_manifest_path: Path,
+    events_path: Path,
+    vix_path: Path,
+    output_dir: Path,
+    blocker: str,
+) -> dict:
+    """Persist event-only results when the preregistered control gate blocks.
+
+    This does not relax the paired-control gate and never labels the run a
+    confirmation. It exists so an expensive event calculation is not lost
+    when a later data-coverage check fails.
+    """
+    output_dir.mkdir(parents=True, exist_ok=True)
+    cost_rows = []
+    event_tables = {}
+    for multiplier in (0.0, 1.0, 2.0, 4.0):
+        table = aggregate_events(detail, multiplier)
+        event_tables[multiplier] = table
+        cost_rows.append({
+            "cost_multiplier": multiplier,
+            "events": int(len(table)),
+            "net_return": float(np.expm1(table["net_log_return"].sum())),
+            "mean_event_log_return": float(table["net_log_return"].mean()),
+            "median_event_log_return": float(table["net_log_return"].median()),
+            "positive_events": int((table["net_log_return"] > 0).sum()),
+        })
+    pd.DataFrame(cost_rows).to_csv(output_dir / "research043_partial_costs.csv", index=False)
+    event_1x = event_tables[1.0]
+    event_1x.to_csv(output_dir / "research043_partial_events.csv", index=False)
+    yearly = event_1x.assign(
+        year=event_1x["release_timestamp_utc"].dt.year
+    ).groupby("year", as_index=False).agg(
+        events=("event_id", "count"),
+        total_log_return=("net_log_return", "sum"),
+        positive_events=("net_log_return", lambda x: int((x > 0).sum())),
+    )
+    yearly["net_return"] = np.expm1(yearly["total_log_return"])
+    yearly.to_csv(output_dir / "research043_partial_years.csv", index=False)
+    loo = leave_one_out(detail, cost_multiplier=1.0)
+    loo.to_csv(output_dir / "research043_partial_leave_one_out.csv", index=False)
+    regimes, vix_sha = vix_regimes(event_1x, vix_path)
+    regimes.to_csv(output_dir / "research043_partial_vix_regimes.csv", index=False)
+    p_positive, ci_low, ci_high = bootstrap_probability(
+        event_1x["net_log_return"].to_numpy()
+    )
+    summary = {
+        "status": "partial_event_results_blocked_at_full_matched_control_gate",
+        "panel_sha256": sha256(panel_path),
+        "panel_manifest_sha256": sha256(panel_manifest_path),
+        "events_sha256": sha256(events_path),
+        "vix_sha256": vix_sha,
+        "panel_rows": int(json.loads(panel_manifest_path.read_text(encoding="utf-8"))["output"]["rows"]),
+        "panel_assets": int(json.loads(panel_manifest_path.read_text(encoding="utf-8"))["output"]["asset_count"]),
+        "events": int(len(event_1x)),
+        "round_trips": int(detail["event_id"].nunique()),
+        "trade_legs": int(2 * detail["event_id"].nunique()),
+        "costs": cost_rows,
+        "yearly_net_returns": {
+            str(int(row.year)): float(row.net_return)
+            for row in yearly.itertuples(index=False)
+        },
+        "positive_leave_one_out": int((loo["net_return"] > 0).sum()),
+        "bootstrap_p_mean_positive": p_positive,
+        "bootstrap_mean_ci95": [ci_low, ci_high],
+        "full_preregistered_gates_evaluable": False,
+        "decision": "research_only_blocked_not_confirmation",
+        "blocker": blocker,
+        "note": "Event-only checkpoint; no paired event-minus-control gate is claimed.",
+    }
+    (output_dir / "research043_partial_summary.json").write_text(
+        json.dumps(summary, indent=2, sort_keys=True), encoding="utf-8"
+    )
+    (output_dir / "research043_blocker.json").write_text(
+        json.dumps({
+            "status": "blocked",
+            "message": blocker,
+            "partial_summary": str(output_dir / "research043_partial_summary.json"),
+        }, indent=2, sort_keys=True), encoding="utf-8"
+    )
+    return summary
+
+
 def run(
     panel_path: Path, panel_manifest_path: Path, events_path: Path,
     vix_path: Path, output_dir: Path,
@@ -107,8 +192,15 @@ def run(
     prices, panel_manifest = load_panel(panel_path, panel_manifest_path)
     events = load_events(events_path)
     detail = event_windows(prices, events)
-    placebos = placebo_windows_multiyear(prices, events)
     output_dir.mkdir(parents=True, exist_ok=True)
+    try:
+        placebos = placebo_windows_multiyear(prices, events)
+    except ValueError as exc:
+        write_partial_event_checkpoint(
+            detail, panel_path, panel_manifest_path, events_path, vix_path,
+            output_dir, str(exc)
+        )
+        raise
 
     cost_rows = []
     event_tables = {}
