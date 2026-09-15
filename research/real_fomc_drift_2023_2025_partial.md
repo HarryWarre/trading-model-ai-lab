@@ -37,7 +37,7 @@ The full confirmation requires positive results at 1x and 2x cost, non-negative 
 
 ## Event-only checkpoint
 
-The event calculation completed for all 24 FOMC decisions and 48 trade legs.
+The event calculation completed for all 24 FOMC decisions. Each event holds four assets, so the correct cadence is 96 asset round trips and 192 entry/exit order legs. A prior checkpoint incorrectly reported 24/48 by counting portfolio event dates instead of asset positions; this reporting defect did not affect returns or costs.
 
 | Cost | Net return |
 |---:|---:|
