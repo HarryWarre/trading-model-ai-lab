@@ -1,0 +1,148 @@
+{
+  "available_paired_control_events": 22,
+  "bootstrap_mean_ci95": [
+    -0.000770361960693246,
+    0.0043650742700252956
+  ],
+  "bootstrap_p_mean_positive": 0.9117,
+  "costs": [
+    {
+      "cost_multiplier": 0.0,
+      "events": 24,
+      "mean_event_log_return": 0.0018165657642176239,
+      "median_event_log_return": 0.002005148407539484,
+      "net_return": 0.04456191595833661,
+      "positive_events": 15
+    },
+    {
+      "cost_multiplier": 1.0,
+      "events": 24,
+      "mean_event_log_return": 0.0017675981706603908,
+      "median_event_log_return": 0.0019684245757705964,
+      "net_return": 0.043335044622482874,
+      "positive_events": 15
+    },
+    {
+      "cost_multiplier": 2.0,
+      "events": 24,
+      "mean_event_log_return": 0.0017186305771031585,
+      "median_event_log_return": 0.0019317007440017085,
+      "net_return": 0.04210961428620203,
+      "positive_events": 15
+    },
+    {
+      "cost_multiplier": 4.0,
+      "events": 24,
+      "mean_event_log_return": 0.0016206953899886934,
+      "median_event_log_return": 0.0018582530804639335,
+      "net_return": 0.039663069844346734,
+      "positive_events": 15
+    }
+  ],
+  "decision": "research_only_blocked_not_confirmation",
+  "events": 24,
+  "full_preregistered_gates_evaluable": false,
+  "leave_one_out": [
+    {
+      "events": 24,
+      "median_event_log_return": 0.0009146376007772187,
+      "net_return": 0.03873874692873127,
+      "omitted_asset": "SPXUSD",
+      "positive_events": 14
+    },
+    {
+      "events": 24,
+      "median_event_log_return": 0.000973264409396455,
+      "net_return": 0.03552955515144429,
+      "omitted_asset": "NSXUSD",
+      "positive_events": 15
+    },
+    {
+      "events": 24,
+      "median_event_log_return": 0.002060266464165301,
+      "net_return": 0.05025767322733613,
+      "omitted_asset": "GRXEUR",
+      "positive_events": 15
+    },
+    {
+      "events": 24,
+      "median_event_log_return": 0.002389775082345085,
+      "net_return": 0.04940706451346152,
+      "omitted_asset": "UKXGBP",
+      "positive_events": 15
+    }
+  ],
+  "leave_one_out_positive": 4,
+  "paired_available_bootstrap_p": 0.7652,
+  "paired_available_ci95": [
+    -0.0021231844162155357,
+    0.00466414796183334
+  ],
+  "panel_manifest_sha256": "cabb1aad9a8533121d123f762fac19454a41e744ba254c9a1c8a9d0a84a51db7",
+  "panel_sha256": "6b5b91b058ec78c49b95ec48dde207157f18f7dbc4451e0bd1f15b4933a44942",
+  "placebo_rejections": [
+    {
+      "event_id": "FOMC_2023_03_22",
+      "offset_days": -7,
+      "reason": "stale boundary price by 0 days 02:00:00"
+    },
+    {
+      "event_id": "FOMC_2023_03_22",
+      "offset_days": 7,
+      "reason": "stale boundary price by 0 days 01:00:00"
+    },
+    {
+      "event_id": "FOMC_2023_05_03",
+      "offset_days": -7,
+      "reason": "stale boundary price by 0 days 02:00:00"
+    },
+    {
+      "event_id": "FOMC_2023_05_03",
+      "offset_days": 7,
+      "reason": "stale boundary price by 0 days 01:00:00"
+    },
+    {
+      "event_id": "FOMC_2023_06_14",
+      "offset_days": 7,
+      "reason": "stale boundary price by 0 days 01:00:00"
+    },
+    {
+      "event_id": "FOMC_2023_07_26",
+      "offset_days": -7,
+      "reason": "stale boundary price by 0 days 01:00:00"
+    },
+    {
+      "event_id": "FOMC_2024_12_18",
+      "offset_days": 7,
+      "reason": "stale boundary price by 0 days 21:45:00"
+    }
+  ],
+  "reason": "5 event-control windows are unavailable under the frozen 10-minute staleness rule; two events have no valid \u00b17-day control. No paired gate is claimed.",
+  "round_trips": 24,
+  "status": "partial_event_results_blocked_at_full_matched_control_gate",
+  "trade_legs": 48,
+  "vix_regimes": [
+    {
+      "events": 12,
+      "mean_event_log_return": 0.0015409656464852237,
+      "mean_vix": 19.151666666666667,
+      "net_return": 0.018663615888497628,
+      "regime": "high_vix",
+      "total_log_return": 0.018491587757822683
+    },
+    {
+      "events": 12,
+      "mean_event_log_return": 0.001994230694835559,
+      "mean_vix": 14.563333333333333,
+      "net_return": 0.0242194070242377,
+      "regime": "low_vix",
+      "total_log_return": 0.023930768338026705
+    }
+  ],
+  "vix_sha256": "6b2cd4028784f69ae160250c3c10dbce88150e125f5fdc18f0c8d43ae557d5a3",
+  "yearly_net_returns": {
+    "2023": 0.02358029738632242,
+    "2024": 0.0178492520801374,
+    "2025": 0.0014249689078716904
+  }
+}
