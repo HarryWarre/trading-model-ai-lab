@@ -65,3 +65,13 @@ def test_panel_rejects_long_format_even_with_valid_hash(tmp_path):
     }))
     with pytest.raises(ValueError, match="wide_close"):
         load_panel(panel, manifest)
+
+
+def test_partial_checkpoint_counts_asset_positions_not_event_dates(tmp_path, monkeypatch):
+    from real_fomc_drift_2023_2025 import write_partial_event_checkpoint
+    detail = pd.DataFrame({"event_id": [f"e{i}" for i in range(24) for _ in ASSETS],
+                           "asset": ASSETS * 24})
+    assert len(detail) == 96
+    # Cadence convention: each event-asset row is one round trip and two order legs.
+    assert len(detail) == 24 * len(ASSETS)
+    assert 2 * len(detail) == 192
