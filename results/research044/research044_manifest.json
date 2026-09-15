@@ -1,0 +1,32 @@
+{
+  "events": {
+    "sha256": "2f75e6409e1253cd22b3c9f507b8a6f1f5145668d65936627d76998aa14fd27f"
+  },
+  "panel": {
+    "bytes": 31410807,
+    "sha256": "6b5b91b058ec78c49b95ec48dde207157f18f7dbc4451e0bd1f15b4933a44942"
+  },
+  "panel_manifest": {
+    "sha256": "cabb1aad9a8533121d123f762fac19454a41e744ba254c9a1c8a9d0a84a51db7"
+  },
+  "parameters": {
+    "bootstrap_block_length": 2,
+    "bootstrap_draws": 10000,
+    "control_scan_weeks": 12,
+    "controls_per_event": 4,
+    "cost_multipliers": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "end_lag_hours": 3,
+    "max_staleness_minutes": 10,
+    "seed": 20260915,
+    "vol_lookback_days": 20,
+    "window_hours": 24
+  },
+  "vix": {
+    "sha256": "6b2cd4028784f69ae160250c3c10dbce88150e125f5fdc18f0c8d43ae557d5a3"
+  }
+}
