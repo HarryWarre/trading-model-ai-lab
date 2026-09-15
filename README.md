@@ -135,3 +135,16 @@ Current data status: 45 hash-locked HistData archives cover 15 assets for 2023�
 7. **Research 043 — 2023–2025 pre-FOMC confirmation:** preregistered in [issue #60](https://github.com/HarryWarre/trading-model-ai-lab/issues/60). The 15-asset panel is now built and hash-locked: 224,244 rows, 45/45 source archives SHA-verified, with no interpolation. The event-only checkpoint across 24 FOMC decisions is positive at 0x/1x/2x/4x costs (+4.456%, +4.334%, +4.211%, +3.966%), but the full confirmation is **blocked**, not passed: five matched-control windows violate the frozen 10-minute staleness rule and two events have no valid ±7-day control. Bootstrap P(event return > 0) is 91.17%, below the 95% gate. See the partial results under [results/research043_partial](https://github.com/HarryWarre/trading-model-ai-lab/tree/main/results/research043_partial).
 
 One-run build and confirmation: [open Research 043 in Colab](https://colab.research.google.com/github/HarryWarre/trading-model-ai-lab/blob/main/colab/run_research043_multiyear_confirmation.ipynb). It revalidates the 45 ZIPs, builds the 15-asset wide panel, runs tests, and now preserves an event-only checkpoint if the matched-control gate blocks. After this one-time panel build, routine event strategies can run against the prepared core without rebuilding raw M1 data.
+
+
+## Research 044 completed — prior same-weekday FOMC controls
+
+Research 043's event-only result was retested against four prior same-weekday controls per event under a design frozen in issue #61 before control performance was computed. The 15-asset 2023–2025 panel passed its SHA/row/time checks; all 24 events obtained four valid historical controls without relaxing the 10-minute quote rule.
+
+At the 4-pip assumption, the event portfolio returned +4.334%, versus +1.400% for the comparable controls. Mean event-minus-control log return was +0.1188% per event, but the circular block-bootstrap probability was only 82.09% and its 95% interval was [-0.1233%, +0.3747%]. The difference was positive in 2023 and 2024, then negative in 2025. Six of seven preregistered gates passed; the 95% inference gate failed, so the decision is rejected/research-only.
+
+The audit also corrected Research 043's cadence label: 24 portfolio event dates contain 96 asset round trips and 192 entry/exit legs. Returns and costs were already calculated at asset level and did not change.
+
+Files: `real_fomc_prior_weekday_controls.py`, `test_real_fomc_prior_weekday_controls.py`, `research/real_fomc_prior_weekday_controls.md`, and `results/research044/`.
+
+Next priority: do not tune the FOMC window. Seek a genuinely later untouched FOMC holdout or preregister an international central-bank replication only where official release timestamps are fully verifiable. Research 039 remains blocked on point-in-time historical consensus data.
