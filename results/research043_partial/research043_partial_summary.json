@@ -7,7 +7,7 @@
   "bootstrap_p_mean_positive": 0.9117,
   "costs": [
     {
-      "cost_multiplier": 0.0,
+      "cost_multiplier": 0,
       "events": 24,
       "mean_event_log_return": 0.0018165657642176239,
       "median_event_log_return": 0.002005148407539484,
@@ -15,7 +15,7 @@
       "positive_events": 15
     },
     {
-      "cost_multiplier": 1.0,
+      "cost_multiplier": 1,
       "events": 24,
       "mean_event_log_return": 0.0017675981706603908,
       "median_event_log_return": 0.0019684245757705964,
@@ -23,7 +23,7 @@
       "positive_events": 15
     },
     {
-      "cost_multiplier": 2.0,
+      "cost_multiplier": 2,
       "events": 24,
       "mean_event_log_return": 0.0017186305771031585,
       "median_event_log_return": 0.0019317007440017085,
@@ -31,7 +31,7 @@
       "positive_events": 15
     },
     {
-      "cost_multiplier": 4.0,
+      "cost_multiplier": 4,
       "events": 24,
       "mean_event_log_return": 0.0016206953899886934,
       "median_event_log_return": 0.0018582530804639335,
@@ -117,10 +117,10 @@
       "reason": "stale boundary price by 0 days 21:45:00"
     }
   ],
-  "reason": "5 event-control windows are unavailable under the frozen 10-minute staleness rule; two events have no valid \u00b17-day control. No paired gate is claimed.",
-  "round_trips": 24,
+  "reason": "5 event-control windows are unavailable under the frozen 10-minute staleness rule; two events have no valid ±7-day control. No paired gate is claimed.",
+  "round_trips": 96,
   "status": "partial_event_results_blocked_at_full_matched_control_gate",
-  "trade_legs": 48,
+  "trade_legs": 192,
   "vix_regimes": [
     {
       "events": 12,
