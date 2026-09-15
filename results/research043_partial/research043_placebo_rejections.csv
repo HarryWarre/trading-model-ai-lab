@@ -1,0 +1,8 @@
+event_id,offset_days,reason
+FOMC_2023_03_22,-7,stale boundary price by 0 days 02:00:00
+FOMC_2023_03_22,7,stale boundary price by 0 days 01:00:00
+FOMC_2023_05_03,-7,stale boundary price by 0 days 02:00:00
+FOMC_2023_05_03,7,stale boundary price by 0 days 01:00:00
+FOMC_2023_06_14,7,stale boundary price by 0 days 01:00:00
+FOMC_2023_07_26,-7,stale boundary price by 0 days 01:00:00
+FOMC_2024_12_18,7,stale boundary price by 0 days 21:45:00
