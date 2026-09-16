@@ -1,0 +1,38 @@
+{
+  "analysis_assets": 12,
+  "asset_events": 238,
+  "block_bootstrap_ci95_bps": [
+    1.6305475671109777,
+    20.568889988364987
+  ],
+  "block_bootstrap_p_positive": 0.9915,
+  "decision": "gates_passed_but_coverage_and_outliers_limit_interpretation_research_only",
+  "drop_top3_block_bootstrap_p_positive": 0.7962,
+  "drop_top3_mean_difference_bps": 1.5225605981199166,
+  "eligible_events": 20,
+  "events_total": 24,
+  "gates": {
+    "all_three_families_positive": true,
+    "block_bootstrap_p_at_least_95pct": true,
+    "coverage_at_least_20_events": true,
+    "leave_one_family_out_positive": true,
+    "mean_difference_positive": true,
+    "two_of_three_years_positive": true
+  },
+  "mean_control_jump_bps": 6.518183255291147,
+  "mean_difference_bps": 10.464992936358849,
+  "mean_event_jump_bps": 16.983176191649996,
+  "median_difference_bps": -0.7367078619268019,
+  "missing_event_ids": [
+    "FOMC_2023_03_22",
+    "FOMC_2023_05_03",
+    "FOMC_2023_06_14",
+    "FOMC_2023_07_26"
+  ],
+  "no_trading_pnl_or_cost_claim": true,
+  "panel_assets": 15,
+  "passed_all_gates": true,
+  "positive_event_differences": 9,
+  "status": "completed",
+  "top3_share_of_total_difference": 0.8763327872008848
+}
