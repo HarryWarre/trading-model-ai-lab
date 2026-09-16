@@ -1,0 +1,22 @@
+{
+  "event_file": {
+    "sha256": "2f75e6409e1253cd22b3c9f507b8a6f1f5145668d65936627d76998aa14fd27f"
+  },
+  "panel": {
+    "bytes": 31410807,
+    "sha256": "6b5b91b058ec78c49b95ec48dde207157f18f7dbc4451e0bd1f15b4933a44942"
+  },
+  "panel_manifest": {
+    "sha256": "cabb1aad9a8533121d123f762fac19454a41e744ba254c9a1c8a9d0a84a51db7"
+  },
+  "parameters": {
+    "bootstrap_block_events": 2,
+    "bootstrap_draws": 10000,
+    "controls_per_asset": 4,
+    "min_assets_per_event": 8,
+    "min_events": 20,
+    "scan_weeks": 12,
+    "seed": 20260916
+  },
+  "source_manifest": "HistData fixed-EST M1 converted to UTC, 5-minute right-closed/right-labeled; original raw ZIP hashes in panel manifest"
+}
