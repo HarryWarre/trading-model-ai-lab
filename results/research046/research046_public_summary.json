@@ -1,0 +1,17 @@
+{
+  "scope": "ex-post quote coverage audit, not a trading backtest",
+  "asset_event_rows": 288,
+  "control_asset_rows": 1152,
+  "events": 24,
+  "eligible_events": 20,
+  "broad_year_completeness_pass": false,
+  "gates": {
+    "at_least_23_of_24_events": false,
+    "every_family_gap_at_most_5pp": true
+  },
+  "observed_20_mean_bps": 10.464992936358849,
+  "24_event_mean_if_missing_zero_bps": 8.720827446965707,
+  "24_event_mean_if_missing_equal_observed_min_bps": 7.393839010257523,
+  "bounds_are_hypothetical_not_observed": true,
+  "no_imputed_prices_or_pnl": true
+}
