@@ -1,0 +1,21 @@
+{
+  "research": 47,
+  "preregistered_issue": 64,
+  "panel_sha256": "6b5b91b058ec78c49b95ec48dde207157f18f7dbc4451e0bd1f15b4933a44942",
+  "panel_manifest_sha256": "cabb1aad9a8533121d123f762fac19454a41e744ba254c9a1c8a9d0a84a51db7",
+  "events_sha256": "2f75e6409e1253cd22b3c9f507b8a6f1f5145668d65936627d76998aa14fd27f",
+  "vix_sha256": "d189972fce09597c45f246711881ba8ab35acca9ad52b98027214c42bb01422c",
+  "source_timezone": "HistData fixed EST converted to UTC",
+  "bar_contract": "5-minute right-closed/right-labeled closes; exact boundaries only",
+  "statement_window_minutes": [-10, 20],
+  "press_conference_window_minutes": [20, 90],
+  "warmup_eligible_events": 8,
+  "ridge_alpha": 10.0,
+  "roundtrip_cost_pips": 4,
+  "cost_multipliers": [0, 1, 2, 4],
+  "bootstrap_draws": 10000,
+  "bootstrap_block_events": 2,
+  "seed": 20260919,
+  "missing_data_rule": "No fill, interpolation, stale quote, or later-event replacement.",
+  "raw_panel_in_repository": false
+}
