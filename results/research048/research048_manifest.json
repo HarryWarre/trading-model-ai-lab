@@ -1,0 +1,138 @@
+{
+  "artifacts": {
+    "research048_coverage.csv": {
+      "sha256": "b1cfcfca13141ab2fff9c27f733aed633ebb9812cd425ea752e1d65bff17da05",
+      "size_bytes": 862
+    },
+    "research048_economic_asset_leave_one_out.csv": {
+      "sha256": "523a3228ab92d867682c73cd4f2bc4a210b967918f616a4fa2353302e0baeb2d",
+      "size_bytes": 352
+    },
+    "research048_economic_events_0x.csv": {
+      "sha256": "1720bfece283572feb49b8e6aff16da31ddd4ff1a49476a1e7d46896d8fc760c",
+      "size_bytes": 752
+    },
+    "research048_economic_events_1x.csv": {
+      "sha256": "238b35f86d3194d12ddeca37214053e5e773c1e83786867c629a561fcb9c8ade",
+      "size_bytes": 751
+    },
+    "research048_economic_events_2x.csv": {
+      "sha256": "a6b07cb0f6f4427df44ab479f0905603c041c01583d562fe381a24235852a6a2",
+      "size_bytes": 751
+    },
+    "research048_economic_events_4x.csv": {
+      "sha256": "9c1ce3c5e131297b0c556d1d8ba106dec260349b603e1371d6f66240c2f7987d",
+      "size_bytes": 755
+    },
+    "research048_economic_family_leave_one_out.csv": {
+      "sha256": "3ec89a290d0170acaf18b0a3f1112e0af6d0631eb2a5b343615dea6da0deeda8",
+      "size_bytes": 107
+    },
+    "research048_economic_trades.csv": {
+      "sha256": "aa2eb8e81932b20ae9b9b55fca616e6b797e9dce56a87df5dc2ee5afac055f41",
+      "size_bytes": 29800
+    },
+    "research048_economic_years.csv": {
+      "sha256": "6b0e3ea5dfd9510f8e8de996c778a862b6587341fe39d4a31f4589cd5336fbb3",
+      "size_bytes": 114
+    },
+    "research048_long_events_0x.csv": {
+      "sha256": "bf16902359f1743a9f9453edb4b6c8bf1cd6bfc3462b7a71833c32d8d05ea9a7",
+      "size_bytes": 1076
+    },
+    "research048_long_events_1x.csv": {
+      "sha256": "8e0723c1090ec164cab07362cc081c71f6cb492743644eb01f647f606c2d3241",
+      "size_bytes": 1073
+    },
+    "research048_long_events_2x.csv": {
+      "sha256": "f779ecc6b5a19276b1f8c50fba01f8ccffbad09fbd9e878c25c766d7b023c308",
+      "size_bytes": 1078
+    },
+    "research048_long_events_4x.csv": {
+      "sha256": "a3d48d5b2b02e6c8269a5115c26e6ddc192922d803b12899d77845f318e0a3e4",
+      "size_bytes": 1075
+    },
+    "research048_long_trades.csv": {
+      "sha256": "b4844abf96bacb93320a2c53ea96e962ab36e150a3f1badb3ae6da5408d8fb98",
+      "size_bytes": 63974
+    },
+    "research048_price_only_events_0x.csv": {
+      "sha256": "afb753ea6bbbb9f1bba9c8f56404ce0112f47cf533f369433fd0b9294ec14605",
+      "size_bytes": 1068
+    },
+    "research048_price_only_events_1x.csv": {
+      "sha256": "9c61ae4a73a8d3d9cbf64200868c813c5948f6b3f816b9e5990f2d32501ad40b",
+      "size_bytes": 1069
+    },
+    "research048_price_only_events_2x.csv": {
+      "sha256": "cbe0e339a49cf77becc821e8cc089bbf17be8ed024db9707a0c8756fac56cb74",
+      "size_bytes": 1069
+    },
+    "research048_price_only_events_4x.csv": {
+      "sha256": "eb637da2e337b6e40cf8a692e9a03a6529378b43475cd95660b6f9c2297fc53a",
+      "size_bytes": 1070
+    },
+    "research048_price_only_trades.csv": {
+      "sha256": "a29bb97ffdd47f6f9d95adc755269631705af3ae9b3d816eb0c61a75a19b6e36",
+      "size_bytes": 64048
+    },
+    "research048_ridge_asset_leave_one_out.csv": {
+      "sha256": "d04275608531e5a0084d7b1f76b2ff9becb427df25941b771053b450050df2d0",
+      "size_bytes": 362
+    },
+    "research048_ridge_events_0x.csv": {
+      "sha256": "782bedf13e0fce3c995a9606de77b511d9ad1d3ddb7232c76858d269bdfad911",
+      "size_bytes": 1053
+    },
+    "research048_ridge_events_1x.csv": {
+      "sha256": "b058bf9c8ed288657499376c2e8c1f991c1728cf6810f5ae856b631e77fbc115",
+      "size_bytes": 1052
+    },
+    "research048_ridge_events_2x.csv": {
+      "sha256": "559bc678f6f7a277622467299a7fbd13664c594b8bec69309db1da06f2848f95",
+      "size_bytes": 1055
+    },
+    "research048_ridge_events_4x.csv": {
+      "sha256": "883c4f86636472e89d263206b28aef55fedc708e318dc585aef2cc98cae7f810",
+      "size_bytes": 1055
+    },
+    "research048_ridge_family_leave_one_out.csv": {
+      "sha256": "3e66a15844f921e9f7791153d71784981ba01e63487f436c7db370390fa78111",
+      "size_bytes": 106
+    },
+    "research048_ridge_phases.csv": {
+      "sha256": "71dc892e8a2065a227b8d163838b34597c56cf6ac35653cdb89a025d99c36be5",
+      "size_bytes": 120
+    },
+    "research048_ridge_trades.csv": {
+      "sha256": "2606c6ede9f9fe81b7357cedd0e83dd46ab21b8987a0c5a6625c0f5465fcb94f",
+      "size_bytes": 29229
+    },
+    "research048_ridge_vix_regimes.csv": {
+      "sha256": "99bcf4e6677ae51e2e7c28dbf06f95a1c96caf57b6e77319ea5c132ecbc021b2",
+      "size_bytes": 73
+    },
+    "research048_ridge_years.csv": {
+      "sha256": "d3419e0aad9640f5b253f657aee9c8aa13ae27508f8422bedf200afc8a6477a2",
+      "size_bytes": 113
+    },
+    "research048_rows.csv": {
+      "sha256": "8b1e3e9c7e4739b97975c243cf09f2ecd03a4e3e06a9953d66bc50e2539b6a13",
+      "size_bytes": 85972
+    },
+    "research048_summary.json": {
+      "sha256": "a39668a06e1e615e09f5fa395993b0fcc1690db9c6a0763b3e3f08d0ff7fbabd",
+      "size_bytes": 8096
+    }
+  },
+  "inputs": {
+    "events": "2f75e6409e1253cd22b3c9f507b8a6f1f5145668d65936627d76998aa14fd27f",
+    "panel": "6b5b91b058ec78c49b95ec48dde207157f18f7dbc4451e0bd1f15b4933a44942",
+    "panel_manifest": "cabb1aad9a8533121d123f762fac19454a41e744ba254c9a1c8a9d0a84a51db7",
+    "usmpd": "f02bfcbf80cf597548d4fccb5a80b30cb1f4373a7d50e26fd1def097d43df1aa",
+    "usmpd_manifest": "e83cf7cbcdade7576e517cf267d1f4f5d3855d03d05cdaf2a76dbbe547b13887",
+    "vix": "d189972fce09597c45f246711881ba8ab35acca9ad52b98027214c42bb01422c"
+  },
+  "research": 48,
+  "source_updated": "2026-09-17"
+}
