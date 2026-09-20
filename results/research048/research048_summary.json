@@ -1,0 +1,276 @@
+{
+  "all_ridge_asset_loo_positive": true,
+  "decision": "rejected_research_only_failed_preregistered_gates",
+  "economic_active_round_trips": 66,
+  "economic_all_asset_loo_positive": true,
+  "economic_all_family_loo_positive": true,
+  "economic_all_years_positive": true,
+  "economic_minus_price_only_block_p": 0.998,
+  "economic_minus_price_only_ci95_mean_log": [
+    0.00023137199471758466,
+    0.0024697678175872894
+  ],
+  "economic_zero_trade_events": 6,
+  "eligible_events": 20,
+  "evaluation_events": 12,
+  "events_sha256": "2f75e6409e1253cd22b3c9f507b8a6f1f5145668d65936627d76998aa14fd27f",
+  "fixed_roundtrip_cost_pips": 4,
+  "gates": {
+    "all_family_loo_positive": true,
+    "coverage_at_least_16_events_10_assets": true,
+    "ridge_2024_and_2025_positive": false,
+    "ridge_beats_price_only_p_at_least_95pct": false,
+    "ridge_net_1x_positive": true,
+    "ridge_net_2x_positive": true
+  },
+  "models": {
+    "economic": [
+      {
+        "block_ci95_mean_log": [
+          0.0004422478882775481,
+          0.0028521374589773577
+        ],
+        "block_p_mean_positive": 0.9977,
+        "cost_multiplier": 0,
+        "events": 12,
+        "gross_return": 0.020093843152367025,
+        "net_return": 0.020093843152367025,
+        "positive_events": 5,
+        "round_trips": 66,
+        "trade_legs": 132
+      },
+      {
+        "block_ci95_mean_log": [
+          0.00031668166009681035,
+          0.002628996044150735
+        ],
+        "block_p_mean_positive": 0.9951,
+        "cost_multiplier": 1,
+        "events": 12,
+        "gross_return": 0.020093843152367025,
+        "net_return": 0.018015231642184,
+        "positive_events": 5,
+        "round_trips": 66,
+        "trade_legs": 132
+      },
+      {
+        "block_ci95_mean_log": [
+          0.00016613499501031087,
+          0.0024195069341953804
+        ],
+        "block_p_mean_positive": 0.9871,
+        "cost_multiplier": 2,
+        "events": 12,
+        "gross_return": 0.020093843152367025,
+        "net_return": 0.01594085564997736,
+        "positive_events": 5,
+        "round_trips": 66,
+        "trade_legs": 132
+      },
+      {
+        "block_ci95_mean_log": [
+          -0.00015521732097704133,
+          0.002019526539501705
+        ],
+        "block_p_mean_positive": 0.9556,
+        "cost_multiplier": 4,
+        "events": 12,
+        "gross_return": 0.020093843152367025,
+        "net_return": 0.01180477571477947,
+        "positive_events": 4,
+        "round_trips": 66,
+        "trade_legs": 132
+      }
+    ],
+    "long": [
+      {
+        "block_ci95_mean_log": [
+          -0.0008606939871697751,
+          0.0008463245932878069
+        ],
+        "block_p_mean_positive": 0.5133,
+        "cost_multiplier": 0,
+        "events": 12,
+        "gross_return": 7.818652612654931e-05,
+        "net_return": 7.818652612654931e-05,
+        "positive_events": 7,
+        "round_trips": 142,
+        "trade_legs": 284
+      },
+      {
+        "block_ci95_mean_log": [
+          -0.0011849329966612276,
+          0.0005112733757212728
+        ],
+        "block_p_mean_positive": 0.2385,
+        "cost_multiplier": 1,
+        "events": 12,
+        "gross_return": 7.818652612654931e-05,
+        "net_return": -0.003853039683622232,
+        "positive_events": 6,
+        "round_trips": 142,
+        "trade_legs": 284
+      },
+      {
+        "block_ci95_mean_log": [
+          -0.001510969287263658,
+          0.0001780911853754154
+        ],
+        "block_p_mean_positive": 0.0697,
+        "cost_multiplier": 2,
+        "events": 12,
+        "gross_return": 7.818652612654931e-05,
+        "net_return": -0.007768812562101088,
+        "positive_events": 5,
+        "round_trips": 142,
+        "trade_legs": 284
+      },
+      {
+        "block_ci95_mean_log": [
+          -0.002158094436525667,
+          -0.0004908069333107349
+        ],
+        "block_p_mean_positive": 0.0009,
+        "cost_multiplier": 4,
+        "events": 12,
+        "gross_return": 7.818652612654931e-05,
+        "net_return": -0.015554241069627894,
+        "positive_events": 2,
+        "round_trips": 142,
+        "trade_legs": 284
+      }
+    ],
+    "price_only": [
+      {
+        "block_ci95_mean_log": [
+          -0.00042259251750432076,
+          0.0018165430632834077
+        ],
+        "block_p_mean_positive": 0.8613,
+        "cost_multiplier": 0,
+        "events": 12,
+        "gross_return": 0.007710889166692625,
+        "net_return": 0.007710889166692625,
+        "positive_events": 6,
+        "round_trips": 142,
+        "trade_legs": 284
+      },
+      {
+        "block_ci95_mean_log": [
+          -0.0007516997723832457,
+          0.001492299446886946
+        ],
+        "block_p_mean_positive": 0.687,
+        "cost_multiplier": 1,
+        "events": 12,
+        "gross_return": 0.007710889166692625,
+        "net_return": 0.00374965942214419,
+        "positive_events": 5,
+        "round_trips": 142,
+        "trade_legs": 284
+      },
+      {
+        "block_ci95_mean_log": [
+          -0.0010808316249964675,
+          0.0011657343467456538
+        ],
+        "block_p_mean_positive": 0.4773,
+        "cost_multiplier": 2,
+        "events": 12,
+        "gross_return": 0.007710889166692625,
+        "net_return": -0.0001959990496733634,
+        "positive_events": 5,
+        "round_trips": 142,
+        "trade_legs": 284
+      },
+      {
+        "block_ci95_mean_log": [
+          -0.001739095330222912,
+          0.0005098842970310357
+        ],
+        "block_p_mean_positive": 0.1249,
+        "cost_multiplier": 4,
+        "events": 12,
+        "gross_return": 0.007710889166692625,
+        "net_return": -0.00804084677214551,
+        "positive_events": 3,
+        "round_trips": 142,
+        "trade_legs": 284
+      }
+    ],
+    "ridge": [
+      {
+        "block_ci95_mean_log": [
+          -0.0011855351460603586,
+          0.003673891624918552
+        ],
+        "block_p_mean_positive": 0.8338,
+        "cost_multiplier": 0,
+        "events": 12,
+        "gross_return": 0.014937184667155238,
+        "net_return": 0.014937184667155238,
+        "positive_events": 7,
+        "round_trips": 65,
+        "trade_legs": 130
+      },
+      {
+        "block_ci95_mean_log": [
+          -0.001364235522466747,
+          0.003529637818095964
+        ],
+        "block_p_mean_positive": 0.7909,
+        "cost_multiplier": 1,
+        "events": 12,
+        "gross_return": 0.014937184667155238,
+        "net_return": 0.012714577241565486,
+        "positive_events": 7,
+        "round_trips": 65,
+        "trade_legs": 130
+      },
+      {
+        "block_ci95_mean_log": [
+          -0.0015536164075567996,
+          0.003381280146699722
+        ],
+        "block_p_mean_positive": 0.7474,
+        "cost_multiplier": 2,
+        "events": 12,
+        "gross_return": 0.014937184667155238,
+        "net_return": 0.010496837096279302,
+        "positive_events": 7,
+        "round_trips": 65,
+        "trade_legs": 130
+      },
+      {
+        "block_ci95_mean_log": [
+          -0.0019166663865003988,
+          0.0030666049492188256
+        ],
+        "block_p_mean_positive": 0.6421,
+        "cost_multiplier": 4,
+        "events": 12,
+        "gross_return": 0.014937184667155238,
+        "net_return": 0.00607591603459827,
+        "positive_events": 6,
+        "round_trips": 65,
+        "trade_legs": 130
+      }
+    ]
+  },
+  "paired_ci95_mean_log": [
+    -0.001910946516430273,
+    0.0035717728700575533
+  ],
+  "paired_ridge_minus_price_only_block_p": 0.6928,
+  "panel_manifest_sha256": "cabb1aad9a8533121d123f762fac19454a41e744ba254c9a1c8a9d0a84a51db7",
+  "panel_sha256": "6b5b91b058ec78c49b95ec48dde207157f18f7dbc4451e0bd1f15b4933a44942",
+  "passed_all_gates": false,
+  "ridge_abstention_rate": 0.5422535211267605,
+  "ridge_active_round_trips": 65,
+  "ridge_direction_hit_rate": 0.6615384615384615,
+  "ridge_trade_legs": 130,
+  "usmpd_manifest_sha256": "e83cf7cbcdade7576e517cf267d1f4f5d3855d03d05cdaf2a76dbbe547b13887",
+  "usmpd_sha256": "f02bfcbf80cf597548d4fccb5a80b30cb1f4373a7d50e26fd1def097d43df1aa",
+  "vix_sha256": "d189972fce09597c45f246711881ba8ab35acca9ad52b98027214c42bb01422c",
+  "warmup_events": 8
+}
