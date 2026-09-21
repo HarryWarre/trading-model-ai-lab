@@ -1,0 +1,82 @@
+{
+  "artifacts": {
+    "research049_asset_leave_one_out.csv": {
+      "sha256": "4163ef5a75b6d26ce91411270aa2553b2142fa5b75995e9ed7e453edf32ae40a",
+      "size_bytes": 328
+    },
+    "research049_costs.csv": {
+      "sha256": "590db158898524c015512f22c3aeb82d4714ab3d2dfc0a1cfe6346b791721c9a",
+      "size_bytes": 788
+    },
+    "research049_economic_events_0x.csv": {
+      "sha256": "e72e9b27d81a70fc34a508a2b61f06a73a5b47f1fb264329989582d6940519ed",
+      "size_bytes": 745
+    },
+    "research049_economic_events_1x.csv": {
+      "sha256": "1a6349e5170f6a7eb035dd5a02bc15a5b3b773a7a024260679a6fb60f7bd8d52",
+      "size_bytes": 746
+    },
+    "research049_economic_events_2x.csv": {
+      "sha256": "3c6b7aa69e75a7c4d2aee42b4f998958d5c2d29df1479a88ef72c632a4346e02",
+      "size_bytes": 747
+    },
+    "research049_economic_events_4x.csv": {
+      "sha256": "0db8781d348e4b3d4102780f97be827ad435229473afc4b14e0bf5be5b8b7168",
+      "size_bytes": 749
+    },
+    "research049_event_detail.csv": {
+      "sha256": "59fccb1aaa5c0bab51ef787d28c174443709b9c5f88371f8027e4138919ee008",
+      "size_bytes": 1376
+    },
+    "research049_event_leave_one_out.csv": {
+      "sha256": "4090911e126b2d8dbac7b85863ff87253437ea1e809f1da1d6800dd37c8d96cd",
+      "size_bytes": 468
+    },
+    "research049_family_leave_one_out.csv": {
+      "sha256": "62d6b904c63edc291ab883f431a4b4c8dda5cbec81e1bc15f83ea8e7e75a5888",
+      "size_bytes": 108
+    },
+    "research049_long_events_0x.csv": {
+      "sha256": "0a2d42d836c443b3c7a7c401430ed569779182b504f0223a6ba89d326d532caf",
+      "size_bytes": 1080
+    },
+    "research049_long_events_1x.csv": {
+      "sha256": "41aa37bb2e2fcc801a1333684395a7f8288230983852c92f057e799a0536f4f1",
+      "size_bytes": 1076
+    },
+    "research049_long_events_2x.csv": {
+      "sha256": "28f6444585390b789807a650e9a5b5138b2775dda86e0f0a5a3dbd8511ab5661",
+      "size_bytes": 1076
+    },
+    "research049_long_events_4x.csv": {
+      "sha256": "6f5aadcae46f759d95bb640d19474d2eb3390589c0bcc5a07cfd4865ea386c28",
+      "size_bytes": 1080
+    },
+    "research049_price_only_events_0x.csv": {
+      "sha256": "aa1b7ae25262c9cdc3560303e28365b089ac59c62cb259e546f34890c5a9b863",
+      "size_bytes": 1072
+    },
+    "research049_price_only_events_1x.csv": {
+      "sha256": "c74bbb8280acd099609b00932607c9cb014662a7779decc65fbdf8ca038293e7",
+      "size_bytes": 1073
+    },
+    "research049_price_only_events_2x.csv": {
+      "sha256": "4417c0b31e2f5a4458ecf5fa78260adda19628b58d91ad351128bc048ec0242b",
+      "size_bytes": 1072
+    },
+    "research049_price_only_events_4x.csv": {
+      "sha256": "f249ba47184f9cd455f769fd7b23ffc59218dfeb0a5c4b8e16d20c88850b7838",
+      "size_bytes": 1071
+    },
+    "research049_summary.json": {
+      "sha256": "de4706c38bff1f9638883134060f046e6ced8da6e382042003f7c4af317847b4",
+      "size_bytes": 1645
+    },
+    "research049_years.csv": {
+      "sha256": "ae7f2bc0d1c50238cf9bbe84f5ca2faf8604d140e318db07c4b0d00b1b1b1d0b",
+      "size_bytes": 114
+    }
+  },
+  "research": 49,
+  "source": "6dbfe03553c962fb7190a698d20becf48e422a9733380d7af9ff6c306266ad20"
+}
