@@ -1,0 +1,35 @@
+{
+  "decision": "research_only_same_inspected_sample",
+  "economic_direction_hit_rate": 0.8333333333333334,
+  "economic_net_1x": 0.018015231642184062,
+  "economic_net_2x": 0.01594085564997768,
+  "economic_round_trips": 66,
+  "economic_trade_legs": 132,
+  "evaluation_events": 12,
+  "exact_paired_sign_flip_p_economic_beats_price_only": 0.009765625,
+  "gates": {
+    "all_event_leave_one_out_positive": true,
+    "all_family_leave_one_out_positive": true,
+    "all_years_positive": true,
+    "economic_net_1x_positive": true,
+    "economic_net_2x_positive": true,
+    "exact_sign_flip_p_at_most_5pct": true,
+    "largest_positive_event_share_at_most_60pct": true
+  },
+  "largest_positive_event_share": 0.3472693807162919,
+  "minimum_asset_leave_one_out_return": 0.0170057727931409,
+  "minimum_event_leave_one_out_return": 0.010842004456292497,
+  "minimum_family_leave_one_out_return": 0.016291240074269638,
+  "passed_all_gates": true,
+  "research": 49,
+  "source_input_hashes": {
+    "events": "2f75e6409e1253cd22b3c9f507b8a6f1f5145668d65936627d76998aa14fd27f",
+    "panel": "6b5b91b058ec78c49b95ec48dde207157f18f7dbc4451e0bd1f15b4933a44942",
+    "panel_manifest": "cabb1aad9a8533121d123f762fac19454a41e744ba254c9a1c8a9d0a84a51db7",
+    "usmpd": "f02bfcbf80cf597548d4fccb5a80b30cb1f4373a7d50e26fd1def097d43df1aa",
+    "usmpd_manifest": "e83cf7cbcdade7576e517cf267d1f4f5d3855d03d05cdaf2a76dbbe547b13887",
+    "vix": "d189972fce09597c45f246711881ba8ab35acca9ad52b98027214c42bb01422c"
+  },
+  "source_research048_manifest_sha256": "6dbfe03553c962fb7190a698d20becf48e422a9733380d7af9ff6c306266ad20",
+  "untouched_2026_confirmation_available": false
+}
