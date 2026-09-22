@@ -181,3 +181,12 @@ The preregistered conventional-policy economic baseline returned +1.8015% at 1x 
 [Issue #66](https://github.com/HarryWarre/trading-model-ai-lab/issues/66) audits the unchanged Research 048 economic baseline on the same twelve evaluation meetings. All seven locked robustness gates pass: +1.8015% after the four-pip round trip, +1.5941% at 2x cost, exact paired sign-flip p-value 0.00977 versus price-only, every event/family/asset exclusion remains positive, and the largest positive event contributes 34.73% rather than dominating the total.
 
 This strengthens the case for an untouched confirmation but does **not** establish alpha: the rule was selected after the 2023–2025 sample had been inspected. The highest-priority experiment remains an unchanged one-time test on a hash-validated 2026+ CFD panel. The connected Drive folder currently has no 2026 price files, and the official HistData route returned HTTP 502 during the latest acquisition attempt. Do not tune the sign map, T+20/T+90 window, abstention rule, weighting or costs while waiting for the holdout.
+
+
+## Research 050 — USMPD identification and frozen 2026 labels
+
+[Issue #67](https://github.com/HarryWarre/trading-model-ai-lab/issues/67) audits whether the Research 048/049 conventional-policy classifier is historically identified. On 261 scheduled USMPD statements, 232 have the frozen ten-contract rate-path input and S&P futures response. Among 229 nonzero classifications, 148 (64.63%) are conventional and 81 information shocks; the exact one-sided binomial p-value against 50% is 0.00000564. Every broad regime has a negative median rate-equity product and every leave-one-year-out sample keeps a conventional majority.
+
+The broad 1994–2026 claim nevertheless fails its locked 90% coverage gate: coverage is 88.89%, because 1994–1996 have no rows satisfying the at-least-eight-contract requirement and 1997 has only three. The gate is not relaxed. From 2008 onward coverage is 100%.
+
+All six 2026 meetings are valid: four are frozen as conventional (28 Jan, 29 Apr, 17 Jun, 29 Jul) and two as information shocks (18 Mar, 16 Sep). Any later CFD holdout must trade only those four conventional meetings under the unchanged T+20/T+90 sign map and abstain on the other two. No 2026 P&L has been computed because Drive still lacks a comparable CFD panel and a Dukascopy transfer returned no usable bytes.
