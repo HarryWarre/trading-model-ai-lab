@@ -1,0 +1,30 @@
+{
+  "conventional_events_2026": 4,
+  "decision": "mechanism_audit_failed_one_or_more_gates",
+  "events_2026": 6,
+  "exact_binomial_p_conventional_share_gt_50pct": 5.64407665891146e-06,
+  "gates": {
+    "2026_at_least_2_conventional_and_4_valid": true,
+    "all_leave_one_year_out_conventional_majority": true,
+    "every_regime_conventional_share_at_least_35pct": true,
+    "every_regime_median_product_negative": true,
+    "overall_conventional_majority_exact_p_at_most_5pct": true,
+    "scheduled_coverage_at_least_90pct": false
+  },
+  "information_events_2026": 2,
+  "input_manifest_sha256": "e83cf7cbcdade7576e517cf267d1f4f5d3855d03d05cdaf2a76dbbe547b13887",
+  "passed_all_gates": false,
+  "research": 50,
+  "scheduled_conventional": 148,
+  "scheduled_conventional_share": 0.6462882096069869,
+  "scheduled_coverage": 0.8888888888888888,
+  "scheduled_information": 81,
+  "scheduled_rows": 261,
+  "scheduled_valid_rows": 232,
+  "source_updated": "2026-09-17",
+  "statement_rows": 279,
+  "trading_pnl_computed": false,
+  "unscheduled_rows": 18,
+  "valid_events_2026": 6,
+  "workbook_sha256": "f02bfcbf80cf597548d4fccb5a80b30cb1f4373a7d50e26fd1def097d43df1aa"
+}
