@@ -1,0 +1,33 @@
+{
+  "artifacts": {
+    "research050_2026_events.csv": {
+      "sha256": "506027411de31c2baa60df70b695809476843390b6575fb0e905a81244169b3f",
+      "size_bytes": 934
+    },
+    "research050_event_detail.csv": {
+      "sha256": "d3cd01e908215e3a40a14898c436b1e92518ead8376bbc6a1498cde0026d704b",
+      "size_bytes": 36869
+    },
+    "research050_regimes.csv": {
+      "sha256": "e73cf167bbb4f976100bd47cc263a36bcb8fe57537748d7790a65eb7e694ace0",
+      "size_bytes": 327
+    },
+    "research050_summary.json": {
+      "sha256": "c10fc26e3a3c8f800a4b13cac5c87eb90b503dd4822653c1eb29364902f4582b",
+      "size_bytes": 1162
+    },
+    "research050_year_leave_one_out.csv": {
+      "sha256": "8b56b6a8742f3fe701ec61ea091584e205ed70d8cd39fff5adccd506d882734f",
+      "size_bytes": 622
+    },
+    "research050_years.csv": {
+      "sha256": "3c3e889bf2c7541a39647ffd548b4adb4efbadcaa49a29a0ca281702dac2f218",
+      "size_bytes": 1676
+    }
+  },
+  "inputs": {
+    "manifest": "e83cf7cbcdade7576e517cf267d1f4f5d3855d03d05cdaf2a76dbbe547b13887",
+    "workbook": "f02bfcbf80cf597548d4fccb5a80b30cb1f4373a7d50e26fd1def097d43df1aa"
+  },
+  "research": 50
+}
