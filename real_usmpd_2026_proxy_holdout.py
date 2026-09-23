@@ -58,6 +58,7 @@ def epoch(value: str) -> int:
 
 def download(raw_dir: Path) -> dict:
     raw_dir.mkdir(parents=True, exist_ok=True)
+    retrieved_start = dt.datetime.now(dt.timezone.utc).isoformat()
     manifest = {}
     for event_id, event in EVENTS.items():
         release = epoch(event["release_utc"])
@@ -78,7 +79,11 @@ def download(raw_dir: Path) -> dict:
             path.write_bytes(payload)
             manifest[path.name] = {"sha256": sha256(path), "size_bytes": len(payload), "source_url": url}
             time.sleep(0.35)
-    return manifest
+    return {
+        "retrieved_start_utc": retrieved_start,
+        "retrieved_end_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
+        "files": manifest,
+    }
 
 
 def chart(path: Path) -> tuple[dict, dict[int, float]]:
@@ -221,7 +226,7 @@ if __name__ == "__main__":
         manifest_path.write_text(json.dumps(raw_manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     else:
         raw_manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-        for name, meta in raw_manifest.items():
+        for name, meta in raw_manifest["files"].items():
             path = args.raw / name
             if sha256(path) != meta["sha256"] or path.stat().st_size != meta["size_bytes"]:
                 raise ValueError(f"raw hash/size mismatch: {name}")
