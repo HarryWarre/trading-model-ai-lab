@@ -190,3 +190,11 @@ This strengthens the case for an untouched confirmation but does **not** establi
 The broad 1994–2026 claim nevertheless fails its locked 90% coverage gate: coverage is 88.89%, because 1994–1996 have no rows satisfying the at-least-eight-contract requirement and 1997 has only three. The gate is not relaxed. From 2008 onward coverage is 100%.
 
 All six 2026 meetings are valid: four are frozen as conventional (28 Jan, 29 Apr, 17 Jun, 29 Jul) and two as information shocks (18 Mar, 16 Sep). Any later CFD holdout must trade only those four conventional meetings under the unchanged T+20/T+90 sign map and abstain on the other two. No 2026 P&L has been computed because Drive still lacks a comparable CFD panel and a Dukascopy transfer returned no usable bytes.
+
+
+## Research 051 — 2026 untouched proxy holdout
+
+- Preregistered in [issue #68](https://github.com/HarryWarre/trading-model-ai-lab/issues/68) before inspecting returns.
+- Frozen USMPD economic rule remained positive on the 2026-07-29 conventional event (+0.1022% at 4-pip cost), but underperformed price-only (+0.1365%) and had a negative U.S.-equity family contribution (-0.1669%).
+- Decision: failed partial confirmation; research-only. Do not tune the window, drop equities, or promote price-only from one event.
+- Next: acquire comparable 2026 broker/CFD data or additional untouched conventional events; rerun the unchanged rule with event-level inference.
