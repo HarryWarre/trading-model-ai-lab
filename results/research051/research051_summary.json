@@ -1,0 +1,140 @@
+{
+  "decision": "failed_partial_proxy_confirmation_research_only",
+  "event": "2026-07-29",
+  "event_label": "conventional",
+  "family_results_1x": [
+    {
+      "family": "equity",
+      "net_return": -0.0016685863081191807
+    },
+    {
+      "family": "fx",
+      "net_return": 0.001838625005356381
+    },
+    {
+      "family": "metal",
+      "net_return": 0.0029009458111556984
+    }
+  ],
+  "gates": {
+    "coverage_at_least_10_and_three_families": true,
+    "deterministic_rerun": true,
+    "economic_beats_price_and_long_1x": false,
+    "economic_net_1x_positive": true,
+    "economic_net_2x_positive": true,
+    "every_asset_loo_positive": true,
+    "every_family_positive": false,
+    "information_event_zero_trades": true
+  },
+  "limitations": [
+    "one active untouched event",
+    "reference-market proxies rather than broker CFD quotes",
+    "no inferential p-value identifiable",
+    "fixed CFD pip-cost sensitivity is synthetic for futures proxies"
+  ],
+  "minimum_asset_loo_1x": 0.0008284521978926849,
+  "models": {
+    "economic": [
+      {
+        "cost_multiplier": 0,
+        "log_return": 0.0011916288631768854,
+        "net_return": 0.001192339134949427,
+        "round_trips": 13,
+        "trade_legs": 26
+      },
+      {
+        "cost_multiplier": 1,
+        "log_return": 0.0010212343474905502,
+        "net_return": 0.0010217559848430117,
+        "round_trips": 13,
+        "trade_legs": 26
+      },
+      {
+        "cost_multiplier": 2,
+        "log_return": 0.0008508398318042154,
+        "net_return": 0.0008512018986936036,
+        "round_trips": 13,
+        "trade_legs": 26
+      },
+      {
+        "cost_multiplier": 4,
+        "log_return": 0.0005100508004315457,
+        "net_return": 0.0005101808984589836,
+        "round_trips": 13,
+        "trade_legs": 26
+      }
+    ],
+    "long": [
+      {
+        "cost_multiplier": 0,
+        "log_return": 0.0006243558161102443,
+        "net_return": 0.0006245507667735487,
+        "round_trips": 13,
+        "trade_legs": 26
+      },
+      {
+        "cost_multiplier": 1,
+        "log_return": 0.0004539613004239093,
+        "net_return": 0.000454064356448943,
+        "round_trips": 13,
+        "trade_legs": 26
+      },
+      {
+        "cost_multiplier": 2,
+        "log_return": 0.0002835667847375744,
+        "net_return": 0.0002836069935988203,
+        "round_trips": 13,
+        "trade_legs": 26
+      },
+      {
+        "cost_multiplier": 4,
+        "log_return": -5.722224663509528e-05,
+        "net_return": -5.72206094735678e-05,
+        "round_trips": 13,
+        "trade_legs": 26
+      }
+    ],
+    "price_only": [
+      {
+        "cost_multiplier": 0,
+        "log_return": 0.0015341791577583967,
+        "net_return": 0.0015353566126677166,
+        "round_trips": 13,
+        "trade_legs": 26
+      },
+      {
+        "cost_multiplier": 1,
+        "log_return": 0.0013637846420720618,
+        "net_return": 0.0013647150192436655,
+        "round_trips": 13,
+        "trade_legs": 26
+      },
+      {
+        "cost_multiplier": 2,
+        "log_return": 0.0011933901263857269,
+        "net_return": 0.0011941024997341938,
+        "round_trips": 13,
+        "trade_legs": 26
+      },
+      {
+        "cost_multiplier": 4,
+        "log_return": 0.0008526010950130571,
+        "net_return": 0.0008529646626453779,
+        "round_trips": 13,
+        "trade_legs": 26
+      }
+    ]
+  },
+  "passed_all_limited_gates": false,
+  "preregistration_issue": 68,
+  "primary_families": [
+    "equity",
+    "fx",
+    "metal"
+  ],
+  "primary_valid_assets": 13,
+  "research": 51,
+  "ridge_status": "not_identifiable_pre_registered_20day_prevol_unavailable_at_5m_retention_boundary",
+  "september_information_event_economic_round_trips": 0,
+  "source": "Yahoo Finance chart API reference-market proxies"
+}
