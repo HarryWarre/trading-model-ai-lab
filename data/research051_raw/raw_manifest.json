@@ -1,0 +1,152 @@
+{
+  "2026-07-29_AUDUSD%3DX.json": {
+    "sha256": "eb7e91744e00867a75317ae291439e32ac0f3ee6c08230b0e78d0de30c4d8f7e",
+    "size_bytes": 5713,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/AUDUSD%3DX?period1=1785344400&period2=1785358800&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-07-29_CAD%3DX.json": {
+    "sha256": "63b1c55c5ac0c0c7e8b4289e7d307676830131eab1aff0e353c29a2319a5b704",
+    "size_bytes": 5692,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/CAD%3DX?period1=1785344400&period2=1785358800&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-07-29_CHF%3DX.json": {
+    "sha256": "56acf169084dbb7265ff6c8552c11054624a861d4c4f18cc6649ea2f65bd31cf",
+    "size_bytes": 5714,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/CHF%3DX?period1=1785344400&period2=1785358800&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-07-29_CL%3DF.json": {
+    "sha256": "1d92f2a2b79b0e3e8658e7dbfab9dce66ba11c68321fd8c8249251293ec6482d",
+    "size_bytes": 5524,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/CL%3DF?period1=1785344400&period2=1785358800&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-07-29_ES%3DF.json": {
+    "sha256": "bf1e46b82c5ffcc8eb1ce50db6c1ec2eb4b3189caa1fdb671eb0db12b2332b6c",
+    "size_bytes": 3708,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/ES%3DF?period1=1785344400&period2=1785358800&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-07-29_EURJPY%3DX.json": {
+    "sha256": "216041a16305d25e11d4390c146d7511fe1bf035e7faf996116c5cbac844666a",
+    "size_bytes": 5636,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/EURJPY%3DX?period1=1785344400&period2=1785358800&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-07-29_EURUSD%3DX.json": {
+    "sha256": "724eecfdb391ba8b20c53be975b3dee023b802fd7b539ccd3e11ff53a3cc93b9",
+    "size_bytes": 5717,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/EURUSD%3DX?period1=1785344400&period2=1785358800&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-07-29_GBPUSD%3DX.json": {
+    "sha256": "4b6e9c50f4505db53141e5753e2ff24c6965bbbbf5ba722567c81568b788008d",
+    "size_bytes": 5692,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/GBPUSD%3DX?period1=1785344400&period2=1785358800&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-07-29_GC%3DF.json": {
+    "sha256": "5d188a553896de3ca68808001fd6a8ca5d0c56eedf6b9d815d8ba2a95a725634",
+    "size_bytes": 4986,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1785344400&period2=1785358800&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-07-29_JPY%3DX.json": {
+    "sha256": "5571fe210be45fa64232f0e86e98d182d7ba9a9604ba5090c8276eedbd594b12",
+    "size_bytes": 5675,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/JPY%3DX?period1=1785344400&period2=1785358800&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-07-29_NQ%3DF.json": {
+    "sha256": "4095237caa79733fd9fe2bdd5eff5e7a4c2aa7b266718045803117cb353cc720",
+    "size_bytes": 3885,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/NQ%3DF?period1=1785344400&period2=1785358800&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-07-29_NZDUSD%3DX.json": {
+    "sha256": "04bd0723692ac0b33599127ccf333ecaf3b831c2caf57d68ece8ec1cbae9fe5e",
+    "size_bytes": 5732,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/NZDUSD%3DX?period1=1785344400&period2=1785358800&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-07-29_RTY%3DF.json": {
+    "sha256": "98f755b9617ee1917dd1f8cf005551147d7934afa25736f8d2351bbecc10e4f4",
+    "size_bytes": 5180,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/RTY%3DF?period1=1785344400&period2=1785358800&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-07-29_SI%3DF.json": {
+    "sha256": "3fe93d999d779ca60240b9d836da36aa0f30df6428318e8ac1d2f7fc79f81293",
+    "size_bytes": 5533,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/SI%3DF?period1=1785344400&period2=1785358800&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-07-29_YM%3DF.json": {
+    "sha256": "eca0c26530d110551976f21ae12d453175e7bd5618ceb27c175a8847512fec2c",
+    "size_bytes": 3783,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/YM%3DF?period1=1785344400&period2=1785358800&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-09-16_AUDUSD%3DX.json": {
+    "sha256": "90a03dcf6c1322abc37ac2d9170f38c98f8aed0b1caa2c87d6de82697f8f323a",
+    "size_bytes": 5717,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/AUDUSD%3DX?period1=1789578000&period2=1789592400&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-09-16_CAD%3DX.json": {
+    "sha256": "0bb606ad7dd50bd1249960fbe2d758a7eafe589a5e0e632f928f3acc8842556a",
+    "size_bytes": 5709,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/CAD%3DX?period1=1789578000&period2=1789592400&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-09-16_CHF%3DX.json": {
+    "sha256": "8dd8c7999899db0bfad267a2d78cf65258798ac602fd4959035e6c2b868cff25",
+    "size_bytes": 5723,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/CHF%3DX?period1=1789578000&period2=1789592400&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-09-16_CL%3DF.json": {
+    "sha256": "54e34ab55d5077c4e3a4d803aca420303519e219d5f28e7552e78cfb7a2a5827",
+    "size_bytes": 5759,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/CL%3DF?period1=1789578000&period2=1789592400&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-09-16_ES%3DF.json": {
+    "sha256": "41aa067533258d8966695a3fec1329ffd36e15fe8905b9ec7b8420d84a803f47",
+    "size_bytes": 3725,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/ES%3DF?period1=1789578000&period2=1789592400&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-09-16_EURJPY%3DX.json": {
+    "sha256": "824ad4501ba0e8579528265d0b3b4170e0710c28324115b467149cc3b266f2a4",
+    "size_bytes": 5651,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/EURJPY%3DX?period1=1789578000&period2=1789592400&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-09-16_EURUSD%3DX.json": {
+    "sha256": "d5397efc38601829edfa6abbee53b16d489fcd259dd7eb08c566193e3160099a",
+    "size_bytes": 5709,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/EURUSD%3DX?period1=1789578000&period2=1789592400&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-09-16_GBPUSD%3DX.json": {
+    "sha256": "e0baeda4dc0574b81ebca454c13af2590fc8f78d2360f07aedd38aedfbf3441e",
+    "size_bytes": 5689,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/GBPUSD%3DX?period1=1789578000&period2=1789592400&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-09-16_GC%3DF.json": {
+    "sha256": "95add878e1c239191a4792c0354ac557bcd6f0a53221374db312550c3399abbe",
+    "size_bytes": 5041,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1789578000&period2=1789592400&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-09-16_JPY%3DX.json": {
+    "sha256": "ca0ae9b5025cc6a1299d56676de18fb85046218e5b9507c7975390530641f2ef",
+    "size_bytes": 5619,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/JPY%3DX?period1=1789578000&period2=1789592400&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-09-16_NQ%3DF.json": {
+    "sha256": "c475a15d53f00e1d0b1b6e67a6d72ac71f903024b9357057aa7bb2031e81a7bb",
+    "size_bytes": 3899,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/NQ%3DF?period1=1789578000&period2=1789592400&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-09-16_NZDUSD%3DX.json": {
+    "sha256": "e32160a2836435aa0c2be9fd9a453bcca8c32c0ef6de3603b0bc07883f873c58",
+    "size_bytes": 5728,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/NZDUSD%3DX?period1=1789578000&period2=1789592400&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-09-16_RTY%3DF.json": {
+    "sha256": "b07d3fcc395478b2c276ca9575e529b85ae413d7b2449ec0083e4a6557bc7026",
+    "size_bytes": 5217,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/RTY%3DF?period1=1789578000&period2=1789592400&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-09-16_SI%3DF.json": {
+    "sha256": "d99676d590569495bfd54b9da81db89eb69049cd0cefbbbe177e792d3c0a0ed0",
+    "size_bytes": 5558,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/SI%3DF?period1=1789578000&period2=1789592400&interval=5m&events=history&includePrePost=true"
+  },
+  "2026-09-16_YM%3DF.json": {
+    "sha256": "8d9000e5f274286776f2a3a8164fd7825417617edb3b9e747ae6cb668745c261",
+    "size_bytes": 3778,
+    "source_url": "https://query2.finance.yahoo.com/v8/finance/chart/YM%3DF?period1=1789578000&period2=1789592400&interval=5m&events=history&includePrePost=true"
+  }
+}
