@@ -198,3 +198,12 @@ All six 2026 meetings are valid: four are frozen as conventional (28 Jan, 29 Apr
 - Frozen USMPD economic rule remained positive on the 2026-07-29 conventional event (+0.1022% at 4-pip cost), but underperformed price-only (+0.1365%) and had a negative U.S.-equity family contribution (-0.1669%).
 - Decision: failed partial confirmation; research-only. Do not tune the window, drop equities, or promote price-only from one event.
 - Next: acquire comparable 2026 broker/CFD data or additional untouched conventional events; rerun the unchanged rule with event-level inference.
+
+
+## Research 052 — scheduled BLS jump-risk audit
+
+[Issue #69](https://github.com/HarryWarre/trading-model-ai-lab/issues/69) measures the unsigned 5-minute-before to 30-minute-after move around official 08:30 ET CPI and Employment Situation releases, against four prior same-weekday/same-clock controls. It is a non-trading event-risk study, distinct from the rejected directional Research 042 strategy.
+
+On the partial hash-locked 15-asset panel, 57/70 official releases pass the exact-timestamp and four-control rules. Mean event jump is 36.2754 bp versus 18.2368 bp for controls, an excess of +18.0386 bp; the deterministic 10,000-resample 95% interval is [+12.8611, +23.8426] bp. The excess is positive for CPI and employment, every year, and every leave-one-family-out sample. Top-five events contribute 30.10% of positive excess. Ridge forecasting slightly lowers MAE to 19.5110 bp from 20.5371 bp price-only, but correlation is only 0.0608.
+
+Seven of eight preregistered gates pass. The coverage gate fails because only 57 events are eligible versus the required 60; thirteen early-2023 events lack sufficient exact controls. Decision: **research-only event-risk evidence, not alpha or an executable strategy**. Turnover, trades and P&L are exactly zero at 0x/1x/2x/4x costs. Next priority is source-level recovery of the missing 2023 quote/control windows without interpolation, then a frozen later-period confirmation.
