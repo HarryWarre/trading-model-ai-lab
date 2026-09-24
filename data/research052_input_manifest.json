@@ -1,0 +1,45 @@
+{
+  "research": 52,
+  "preregistered_issue": 69,
+  "panel": {
+    "path": "histdata_m1_5m_15_2023_2025_recovered.csv",
+    "sha256": "18133cc85f5d75263086c83584276a8128d79daa2e9eeb8efdb873944eef117c",
+    "size_bytes": 31101952,
+    "rows": 222048,
+    "asset_count": 15,
+    "first_timestamp_utc": "2023-01-01T22:00:00+00:00",
+    "last_timestamp_utc": "2025-12-19T17:15:00+00:00",
+    "status": "largest_local_recovered_panel; does not match older Drive manifest hash"
+  },
+  "vix": {
+    "path": "fred_VIXCLS.csv",
+    "sha256": "6b2cd4028784f69ae160250c3c10dbce88150e125f5fdc18f0c8d43ae557d5a3",
+    "size_bytes": 161102,
+    "source": "https://fred.stlouisfed.org/series/VIXCLS"
+  },
+  "official_bls_calendars": [
+    {
+      "year": 2023,
+      "path": "data/bls_schedule_2023.html",
+      "sha256": "dde426274a3f593a352e7b2b9d978799307ace879e032caf0b1e3dd184259412",
+      "size_bytes": 100158,
+      "source": "https://www.bls.gov/schedule/2023/home.htm"
+    },
+    {
+      "year": 2024,
+      "path": "data/bls_schedule_2024.html",
+      "sha256": "989023c355a3a4d179e2a250da476468f3a63ad3e310b6a029b6814a6307f878",
+      "size_bytes": 101431,
+      "source": "https://www.bls.gov/schedule/2024/home.htm"
+    },
+    {
+      "year": 2025,
+      "path": "data/bls_schedule_2025.html",
+      "sha256": "3ef4c8dee4db6a88a1ccc9a7f67715adac973a46ff6288483367e46895aa9607",
+      "size_bytes": 96700,
+      "source": "https://www.bls.gov/schedule/2025/home.htm"
+    }
+  ],
+  "release_timezone": "America/New_York",
+  "missing_data_rule": "fail closed; no nearest quote, interpolation, or forward fill"
+}
