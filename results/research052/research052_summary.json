@@ -1,0 +1,122 @@
+{
+  "bootstrap": {
+    "ci95": [
+      12.861125881795324,
+      23.842579710341223
+    ],
+    "p_mean_positive": 1.0
+  },
+  "categories": [
+    {
+      "category": "cpi",
+      "events": 29,
+      "mean_control_bps": 17.807676897882757,
+      "mean_event_bps": 36.86603852862229,
+      "mean_excess_bps": 19.058361630739526
+    },
+    {
+      "category": "employment",
+      "events": 28,
+      "mean_control_bps": 18.68126792063914,
+      "mean_event_bps": 35.663717141529204,
+      "mean_excess_bps": 16.98244922089006
+    }
+  ],
+  "decision": "research_only_failed_preregistered_gates",
+  "eligible_events": 57,
+  "families": 4,
+  "family_leave_one_out": [
+    {
+      "excluded_family": "fx",
+      "mean_excess_bps": 16.799898245799863
+    },
+    {
+      "excluded_family": "metal",
+      "mean_excess_bps": 16.32058002228753
+    },
+    {
+      "excluded_family": "equity",
+      "mean_excess_bps": 17.847231865940643
+    },
+    {
+      "excluded_family": "energy",
+      "mean_excess_bps": 21.18675060115568
+    }
+  ],
+  "forecast_metrics": {
+    "economic": {
+      "correlation": -0.11454299839937516,
+      "events": 45,
+      "mae_bps": 19.660167556698266
+    },
+    "price_only": {
+      "correlation": -0.006623494486006569,
+      "events": 45,
+      "mae_bps": 20.53707113721383
+    },
+    "ridge": {
+      "correlation": 0.06081350391368878,
+      "events": 45,
+      "mae_bps": 19.51097835085475
+    }
+  },
+  "gates": {
+    "all_family_loo_positive": true,
+    "both_categories_positive": true,
+    "coverage_60_events_12_assets_four_families": false,
+    "each_year_positive": true,
+    "positive_excess_bootstrap_95pct": true,
+    "qa_deterministic_tests_compile": true,
+    "ridge_forecast_gate": true,
+    "top5_positive_share_below_60pct": true
+  },
+  "max_assets": 15,
+  "mean_control_bps": 18.236809330113964,
+  "mean_event_bps": 36.2754245139099,
+  "mean_excess_bps": 18.03861518379593,
+  "panel_sha256": "18133cc85f5d75263086c83584276a8128d79daa2e9eeb8efdb873944eef117c",
+  "passed_all_gates": false,
+  "pnl_cost_sensitivity": {
+    "0x": 0,
+    "1x": 0,
+    "2x": 0,
+    "4x": 0
+  },
+  "positive_events": 45,
+  "research": 52,
+  "round_trips": 0,
+  "source_event_counts": {
+    "(2023, 'cpi')": 12,
+    "(2023, 'employment')": 12,
+    "(2024, 'cpi')": 12,
+    "(2024, 'employment')": 12,
+    "(2025, 'cpi')": 11,
+    "(2025, 'employment')": 11
+  },
+  "top5_positive_excess_share": 0.3009688193333148,
+  "trade_legs": 0,
+  "turnover": 0,
+  "years": [
+    {
+      "events": 11,
+      "mean_control_bps": 19.491204506118486,
+      "mean_event_bps": 36.59709375738647,
+      "mean_excess_bps": 17.10588925126798,
+      "year": 2023
+    },
+    {
+      "events": 24,
+      "mean_control_bps": 18.938060754121103,
+      "mean_event_bps": 41.023740205805204,
+      "mean_excess_bps": 22.0856794516841,
+      "year": 2024
+    },
+    {
+      "events": 22,
+      "mean_control_bps": 16.844610188649373,
+      "mean_event_bps": 30.93460913737672,
+      "mean_excess_bps": 14.08999894872735,
+      "year": 2025
+    }
+  ]
+}
