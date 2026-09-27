@@ -207,3 +207,14 @@ All six 2026 meetings are valid: four are frozen as conventional (28 Jan, 29 Apr
 On the partial hash-locked 15-asset panel, 57/70 official releases pass the exact-timestamp and four-control rules. Mean event jump is 36.2754 bp versus 18.2368 bp for controls, an excess of +18.0386 bp; the deterministic 10,000-resample 95% interval is [+12.8611, +23.8426] bp. The excess is positive for CPI and employment, every year, and every leave-one-family-out sample. Top-five events contribute 30.10% of positive excess. Ridge forecasting slightly lowers MAE to 19.5110 bp from 20.5371 bp price-only, but correlation is only 0.0608.
 
 Seven of eight preregistered gates pass. The coverage gate fails because only 57 events are eligible versus the required 60; thirteen early-2023 events lack sufficient exact controls. Decision: **research-only event-risk evidence, not alpha or an executable strategy**. Turnover, trades and P&L are exactly zero at 0x/1x/2x/4x costs. Next priority is source-level recovery of the missing 2023 quote/control windows without interpolation, then a frozen later-period confirmation.
+
+
+## Research 053/054 — source-level closure of BLS coverage
+
+[Research 053 issue #70](https://github.com/HarryWarre/trading-model-ai-lab/issues/70) applied the strict raw-M1 parser preregistered after Research 052. It stopped before performance calculation because 14/15 source files contain duplicate timestamps; the gate is preserved as failed.
+
+[Research 054 issue #71](https://github.com/HarryWarre/trading-model-ai-lab/issues/71) separately preregistered deterministic collapse of only full-row-identical duplicates. Across 15 hash-locked 2023 files, 1,678 duplicate rows representing 839 timestamps were collapsed, with zero conflicting OHLCV duplicates. All 925,143 reconstructed five-minute closes overlapping the existing panel agree exactly, and reconstruction adds zero cells. The missing early-2023 BLS coverage is therefore present in the raw source rather than caused by panel assembly.
+
+The unchanged Research 052 analysis remains at 57/70 eligible events, +18.0386 bp mean event-minus-control jump and a deterministic 95% interval of [+12.8611, +23.8426] bp. Seven of eight Research 054 gates pass; the frozen 60-event coverage gate fails. Decision remains **research-only event-risk evidence, not alpha or a trade**. Zero positions, turnover and P&L apply at 0x/1x/2x/4x costs.
+
+Next priority: do not tune the window or threshold. Extending coverage requires hash-verified 2022 M1 data and/or a later independently sourced period, followed by another frozen confirmation. See the [report](https://github.com/HarryWarre/trading-model-ai-lab/blob/main/research/real_bls_jump_risk_raw_recovery_2023_2025.md) and [results](https://github.com/HarryWarre/trading-model-ai-lab/tree/main/results/research054).
