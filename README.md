@@ -218,3 +218,13 @@ Seven of eight preregistered gates pass. The coverage gate fails because only 57
 The unchanged Research 052 analysis remains at 57/70 eligible events, +18.0386 bp mean event-minus-control jump and a deterministic 95% interval of [+12.8611, +23.8426] bp. Seven of eight Research 054 gates pass; the frozen 60-event coverage gate fails. Decision remains **research-only event-risk evidence, not alpha or a trade**. Zero positions, turnover and P&L apply at 0x/1x/2x/4x costs.
 
 Next priority: do not tune the window or threshold. Extending coverage requires hash-verified 2022 M1 data and/or a later independently sourced period, followed by another frozen confirmation. See the [report](https://github.com/HarryWarre/trading-model-ai-lab/blob/main/research/real_bls_jump_risk_raw_recovery_2023_2025.md) and [results](https://github.com/HarryWarre/trading-model-ai-lab/tree/main/results/research054).
+
+
+
+## Research 055/056 — BLS cross-family co-jump audit
+
+[Research 055 issue #72](https://github.com/HarryWarre/trading-model-ai-lab/issues/72) is **invalidated**. Its joint ranking of each event with four earlier controls made the earlier control labels depend on the later event return. The mechanically strong 8/8 result is preserved for audit but supplies no evidence and must not be used.
+
+[Research 056 issue #73](https://github.com/HarryWarre/trading-model-ai-lab/issues/73) replaces that design with nested historical controls. Every target is classified only against four observations strictly earlier than itself; later events cannot change earlier labels. On 51/70 eligible BLS releases with 14–15 common assets and all four families, mean active-family breadth is 55.88% at events versus 22.55% on matched controls, a +33.33 percentage-point difference. The broad co-jump rate is 43.14% versus 6.37%. The block-bootstrap probability of a positive mean difference is 100.00%, with a 95% interval of [+25.25, +41.18] percentage points. Both release types, every year and every family leave-one-out remain positive; top-five concentration is 22.65%.
+
+All eight frozen gates pass, seven tests and compilation pass, and two full runs are byte-identical. This is **event-risk evidence only**, not a directional signal or alpha. It makes zero trades, with zero turnover and zero P&L at 0x/1x/2x/4x cost. Next priority is a timing-safe, verifiable consensus-surprise input for direction or an independently sourced later holdout; do not tune the co-jump threshold on these results. See the [report](https://github.com/HarryWarre/trading-model-ai-lab/blob/main/research/real_bls_crossfamily_cojumps_nested_2023_2025.md) and [results](https://github.com/HarryWarre/trading-model-ai-lab/tree/main/results/research056).
