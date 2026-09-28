@@ -1,0 +1,116 @@
+{
+  "bootstrap": {
+    "ci95": [
+      0.3148148148148148,
+      0.5011574074074074
+    ],
+    "p_mean_positive": 1.0
+  },
+  "categories": [
+    {
+      "breadth_difference": 0.4330357142857143,
+      "category": "cpi",
+      "control_breadth": 0.12946428571428573,
+      "event_breadth": 0.5625,
+      "events": 28
+    },
+    {
+      "breadth_difference": 0.38221153846153844,
+      "category": "employment",
+      "control_breadth": 0.13701923076923078,
+      "event_breadth": 0.5192307692307693,
+      "events": 26
+    }
+  ],
+  "control_broad_cojump_rate": 0.023148148148148147,
+  "decision": "cojump_risk_supported_not_alpha",
+  "eligible_events": 54,
+  "event_broad_cojump_rate": 0.42592592592592593,
+  "families": 4,
+  "family_leave_one_out": [
+    {
+      "excluded_family": "fx",
+      "mean_breadth_difference": 0.3580246913580246
+    },
+    {
+      "excluded_family": "metal",
+      "mean_breadth_difference": 0.4212962962962962
+    },
+    {
+      "excluded_family": "equity",
+      "mean_breadth_difference": 0.3503086419753086
+    },
+    {
+      "excluded_family": "energy",
+      "mean_breadth_difference": 0.5046296296296295
+    }
+  ],
+  "forecast_metrics": {
+    "economic": {
+      "correlation": -0.1701023446690015,
+      "events": 42,
+      "mae": 0.23355011477817492
+    },
+    "price_only": {
+      "correlation": -0.838751389049484,
+      "events": 42,
+      "mae": 0.42857142857142855
+    },
+    "ridge": {
+      "correlation": 0.8077014029366965,
+      "events": 42,
+      "mae": 0.11943398536198056
+    }
+  },
+  "gates": {
+    "both_categories_positive": true,
+    "coverage_50_events_12_assets_four_families": true,
+    "event_broad_rate_exceeds_controls": true,
+    "positive_breadth_bootstrap_95pct": true,
+    "qa_deterministic_tests_compile": true,
+    "ridge_forecast_gate": true,
+    "top5_positive_share_below_60pct": true,
+    "years_and_family_loo_positive": true
+  },
+  "max_common_assets": 15,
+  "mean_breadth_difference": 0.4085648148148148,
+  "mean_control_breadth": 0.13310185185185186,
+  "mean_event_breadth": 0.5416666666666666,
+  "official_events": 70,
+  "panel_sha256": "18133cc85f5d75263086c83584276a8128d79daa2e9eeb8efdb873944eef117c",
+  "passed_all_gates": true,
+  "pnl_cost_sensitivity": {
+    "0x": 0,
+    "1x": 0,
+    "2x": 0,
+    "4x": 0
+  },
+  "research": 55,
+  "round_trips": 0,
+  "top5_positive_difference_share": 0.21351351351351353,
+  "trade_legs": 0,
+  "turnover": 0,
+  "years": [
+    {
+      "breadth_difference": 0.34375,
+      "control_breadth": 0.15625,
+      "event_breadth": 0.5,
+      "events": 8,
+      "year": 2023
+    },
+    {
+      "breadth_difference": 0.4010416666666667,
+      "control_breadth": 0.13020833333333334,
+      "event_breadth": 0.53125,
+      "events": 24,
+      "year": 2024
+    },
+    {
+      "breadth_difference": 0.4403409090909091,
+      "control_breadth": 0.1278409090909091,
+      "event_breadth": 0.5681818181818182,
+      "events": 22,
+      "year": 2025
+    }
+  ]
+}
