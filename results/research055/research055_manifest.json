@@ -1,0 +1,86 @@
+{
+  "artifacts": {
+    "research055_candidates.csv": {
+      "sha256": "82526800e96418d75277eed7c8b01c576b2885f1e7c71cdf58344b1b60506fe8",
+      "size_bytes": 19192
+    },
+    "research055_categories.csv": {
+      "sha256": "b26a6978e4b19e1d28b67e5c582c76b8c15603f02e183aaf72f3e6ee22a4e706",
+      "size_bytes": 191
+    },
+    "research055_coverage.csv": {
+      "sha256": "856070a29fffc41adc25cb747ea3092c026e759e1d81a2e71309b18471c506a4",
+      "size_bytes": 2695
+    },
+    "research055_events.csv": {
+      "sha256": "494224eaf0102c9260d747ed0ffb7b5847283abfad72099b787db0a8b36ae608",
+      "size_bytes": 8170
+    },
+    "research055_family_activations.csv": {
+      "sha256": "fda1b9d2e0fe4fc71fe8105a2b7904f3f3001b49244d225aa68de65a43d9f344",
+      "size_bytes": 46587
+    },
+    "research055_family_leave_one_out.csv": {
+      "sha256": "3d710987d19c8e0472f5e2b4428435d7ecf6816a5bd9fa59f28d871ea785a123",
+      "size_bytes": 139
+    },
+    "research055_forecasts.csv": {
+      "sha256": "460a92df18d3c3687ef771074d3658d2c962a228e9f5c56b7914ca376b9ca6c8",
+      "size_bytes": 2852
+    },
+    "research055_summary.json": {
+      "sha256": "1928c3031a74fa3101122209fdf50e962d140f721ea10bb147e192386902ad1b",
+      "size_bytes": 2959
+    },
+    "research055_years.csv": {
+      "sha256": "67f0df2a7ba871589bc97def62e70ebe42edacc393f7839efd5ac18df219ff69",
+      "size_bytes": 208
+    }
+  },
+  "inputs": {
+    "missing_data_rule": "fail closed; no nearest quote, interpolation, or forward fill",
+    "official_bls_calendars": [
+      {
+        "path": "data/bls_schedule_2023.html",
+        "sha256": "dde426274a3f593a352e7b2b9d978799307ace879e032caf0b1e3dd184259412",
+        "size_bytes": 100158,
+        "source": "https://www.bls.gov/schedule/2023/home.htm",
+        "year": 2023
+      },
+      {
+        "path": "data/bls_schedule_2024.html",
+        "sha256": "989023c355a3a4d179e2a250da476468f3a63ad3e310b6a029b6814a6307f878",
+        "size_bytes": 101431,
+        "source": "https://www.bls.gov/schedule/2024/home.htm",
+        "year": 2024
+      },
+      {
+        "path": "data/bls_schedule_2025.html",
+        "sha256": "3ef4c8dee4db6a88a1ccc9a7f67715adac973a46ff6288483367e46895aa9607",
+        "size_bytes": 96700,
+        "source": "https://www.bls.gov/schedule/2025/home.htm",
+        "year": 2025
+      }
+    ],
+    "panel": {
+      "asset_count": 15,
+      "first_timestamp_utc": "2023-01-01T22:00:00+00:00",
+      "last_timestamp_utc": "2025-12-19T17:15:00+00:00",
+      "path": "histdata_m1_5m_15_2023_2025_recovered.csv",
+      "rows": 222048,
+      "sha256": "18133cc85f5d75263086c83584276a8128d79daa2e9eeb8efdb873944eef117c",
+      "size_bytes": 31101952,
+      "status": "largest_local_recovered_panel; does not match older Drive manifest hash"
+    },
+    "preregistered_issue": 69,
+    "release_timezone": "America/New_York",
+    "research": 52,
+    "vix": {
+      "path": "fred_VIXCLS.csv",
+      "sha256": "6b2cd4028784f69ae160250c3c10dbce88150e125f5fdc18f0c8d43ae557d5a3",
+      "size_bytes": 161102,
+      "source": "https://fred.stlouisfed.org/series/VIXCLS"
+    }
+  },
+  "research": 55
+}
