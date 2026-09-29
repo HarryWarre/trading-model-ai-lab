@@ -1,0 +1,152 @@
+{
+  "bootstrap": {
+    "ci95": [
+      4.856972622151177,
+      10.699933145177502
+    ],
+    "p_mean_positive": 1.0
+  },
+  "categories": [
+    {
+      "category": "cpi",
+      "control_delayed_bps": 14.780359121829564,
+      "delayed_event_bps": 23.368532816667194,
+      "delayed_excess_bps": 8.58817369483763,
+      "events": 28,
+      "immediate_event_bps": 29.12951550081673
+    },
+    {
+      "category": "employment",
+      "control_delayed_bps": 15.956304622308677,
+      "delayed_event_bps": 22.7588241702644,
+      "delayed_excess_bps": 6.802519547955725,
+      "events": 26,
+      "immediate_event_bps": 31.951716134657243
+    }
+  ],
+  "decision": "delayed_event_risk_supported_not_alpha",
+  "descriptive_non_gate_time_phases": [
+    {
+      "control_delayed_bps": 15.607738291448458,
+      "delayed_event_bps": 25.544027545780065,
+      "delayed_excess_bps": 9.936289254331607,
+      "events": 27,
+      "time_phase": "early"
+    },
+    {
+      "control_delayed_bps": 15.085371915635001,
+      "delayed_event_bps": 20.605911242870157,
+      "delayed_excess_bps": 5.520539327235154,
+      "events": 27,
+      "time_phase": "late"
+    }
+  ],
+  "descriptive_non_gate_vix_regimes": [
+    {
+      "control_delayed_bps": 14.692280207011722,
+      "delayed_event_bps": 22.84240037013136,
+      "delayed_excess_bps": 8.150120163119636,
+      "events": 44,
+      "vix_regime": "VIX<20"
+    },
+    {
+      "control_delayed_bps": 18.225364648273754,
+      "delayed_event_bps": 24.0982731007776,
+      "delayed_excess_bps": 5.872908452503849,
+      "events": 10,
+      "vix_regime": "VIX>=20"
+    }
+  ],
+  "eligible_events": 54,
+  "families": 4,
+  "family_leave_one_out": [
+    {
+      "excluded_family": "fx",
+      "mean_delayed_excess_bps": 8.37387762923644
+    },
+    {
+      "excluded_family": "metal",
+      "mean_delayed_excess_bps": 6.593489405150167
+    },
+    {
+      "excluded_family": "equity",
+      "mean_delayed_excess_bps": 8.10622245324275
+    },
+    {
+      "excluded_family": "energy",
+      "mean_delayed_excess_bps": 7.840067675504165
+    }
+  ],
+  "forecast_metrics": {
+    "economic": {
+      "correlation": -0.060199912331179814,
+      "events": 42,
+      "mae_bps": 8.189645641235828
+    },
+    "price_only": {
+      "correlation": 0.08505835997142784,
+      "events": 42,
+      "mae_bps": 9.86360468067588
+    },
+    "ridge": {
+      "correlation": 0.06901638673938251,
+      "events": 42,
+      "mae_bps": 8.264142648726724
+    }
+  },
+  "gates": {
+    "both_categories_positive": true,
+    "coverage_50_events_12_assets_four_families": true,
+    "positive_delayed_excess_bootstrap_95pct": true,
+    "positive_immediate_delayed_spearman": true,
+    "qa_exact_boundaries_no_future_features_deterministic": true,
+    "ridge_forecast_gate": true,
+    "top5_positive_share_below_60pct": true,
+    "years_and_family_loo_positive": true
+  },
+  "immediate_delayed_spearman": 0.3821993520106727,
+  "max_assets": 15,
+  "mean_delayed_control_bps": 15.346555103541728,
+  "mean_delayed_event_bps": 23.0749693943251,
+  "mean_delayed_excess_bps": 7.728414290783381,
+  "mean_immediate_event_bps": 30.488352843036235,
+  "min_assets": 14,
+  "official_events": 70,
+  "panel_sha256": "18133cc85f5d75263086c83584276a8128d79daa2e9eeb8efdb873944eef117c",
+  "passed_all_gates": true,
+  "pnl_cost_sensitivity": {
+    "0x": 0,
+    "1x": 0,
+    "2x": 0,
+    "4x": 0
+  },
+  "positive_delayed_excess_events": 42,
+  "research": 57,
+  "round_trips": 0,
+  "top5_positive_delayed_excess_share": 0.30185592987551474,
+  "trade_legs": 0,
+  "turnover": 0,
+  "years": [
+    {
+      "control_delayed_bps": 16.104812684805104,
+      "delayed_event_bps": 21.924708981853577,
+      "delayed_excess_bps": 5.819896297048476,
+      "events": 8,
+      "year": 2023
+    },
+    {
+      "control_delayed_bps": 15.36974493703517,
+      "delayed_event_bps": 25.3510968693907,
+      "delayed_excess_bps": 9.981351932355532,
+      "events": 24,
+      "year": 2024
+    },
+    {
+      "control_delayed_bps": 15.045527073816748,
+      "delayed_event_bps": 21.01019775333411,
+      "delayed_excess_bps": 5.964670679517362,
+      "events": 22,
+      "year": 2025
+    }
+  ]
+}
