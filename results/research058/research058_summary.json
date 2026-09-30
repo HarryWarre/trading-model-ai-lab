@@ -1,0 +1,87 @@
+{
+  "common_events": 51,
+  "cost_sensitivity_return": {
+    "0x": 0.0,
+    "1x_4pip": 0.0,
+    "2x_8pip": 0.0,
+    "4x_16pip": 0.0
+  },
+  "decision": "pass_joint_event_risk_evidence_not_alpha",
+  "gates": {
+    "g1_common_coverage": true,
+    "g2_all_means_positive": true,
+    "g3_all_romano_wolf_p_lt_005": true,
+    "g4_all_holm_p_lt_005": true,
+    "g5_all_leave_one_year_positive": true,
+    "g6_all_top5_share_lt_060": true,
+    "g7_input_hashes_and_exclusions_exported": true,
+    "g8_tests_compile_byte_identical_rerun": true
+  },
+  "gates_passed_before_external_qa": 8,
+  "gates_total": 8,
+  "hypotheses": [
+    {
+      "events": 51,
+      "holm_p": 2.999970000299997e-05,
+      "hypothesis": "h052_full_window_jump",
+      "mean": 19.025224445062513,
+      "positive_events": 40,
+      "raw_shared_sign_p": 9.99990000099999e-06,
+      "romano_wolf_p": 9.99990000099999e-06,
+      "source_research": 52,
+      "standard_error": 3.1365945431715243,
+      "studentized_t": 6.065567029210419,
+      "top5_positive_share": 0.3201477716206671,
+      "unit": "bps"
+    },
+    {
+      "events": 51,
+      "holm_p": 2.999970000299997e-05,
+      "hypothesis": "h056_cojump_breadth",
+      "mean": 0.3333333333333333,
+      "positive_events": 41,
+      "raw_shared_sign_p": 9.99990000099999e-06,
+      "romano_wolf_p": 9.99990000099999e-06,
+      "source_research": 56,
+      "standard_error": 0.041297383164180634,
+      "studentized_t": 8.071536445981174,
+      "top5_positive_share": 0.2264808362369338,
+      "unit": "fraction"
+    },
+    {
+      "events": 51,
+      "holm_p": 2.999970000299997e-05,
+      "hypothesis": "h057_delayed_jump",
+      "mean": 7.828617671868253,
+      "positive_events": 40,
+      "raw_shared_sign_p": 2.999970000299997e-05,
+      "romano_wolf_p": 2.999970000299997e-05,
+      "source_research": 57,
+      "standard_error": 1.5409594792667065,
+      "studentized_t": 5.08035271348838,
+      "top5_positive_share": 0.31762056117704474,
+      "unit": "bps"
+    }
+  ],
+  "interpretation": "joint non-directional event-risk evidence only; not alpha or production",
+  "pairwise_pearson": {
+    "h052_full_window_jump__h056_cojump_breadth": 0.7572473417462956,
+    "h052_full_window_jump__h057_delayed_jump": 0.3885171953482032,
+    "h056_cojump_breadth__h057_delayed_jump": 0.24646675747167718
+  },
+  "preregistered_issue": 75,
+  "research": 58,
+  "source_event_counts": {
+    "h052_full_window_jump": 57,
+    "h056_cojump_breadth": 51,
+    "h057_delayed_jump": 54
+  },
+  "trade_legs": 0,
+  "trades": 0,
+  "turnover": 0.0,
+  "years": [
+    2023,
+    2024,
+    2025
+  ]
+}
