@@ -1,0 +1,10 @@
+left,right,pearson,spearman
+h052_full_window_jump,h052_full_window_jump,1,1
+h052_full_window_jump,h056_cojump_breadth,0.757247341746,0.781709479486
+h052_full_window_jump,h057_delayed_jump,0.388517195348,0.434841628959
+h056_cojump_breadth,h052_full_window_jump,0.757247341746,0.781709479486
+h056_cojump_breadth,h056_cojump_breadth,1,1
+h056_cojump_breadth,h057_delayed_jump,0.246466757472,0.299914525049
+h057_delayed_jump,h052_full_window_jump,0.388517195348,0.434841628959
+h057_delayed_jump,h056_cojump_breadth,0.246466757472,0.299914525049
+h057_delayed_jump,h057_delayed_jump,1,1
