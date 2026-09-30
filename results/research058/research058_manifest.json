@@ -1,0 +1,59 @@
+{
+  "artifacts": {
+    "research058_common_events.csv": {
+      "sha256": "39dec6e3b851a908c99ef26eaa4cb49af879377d524e58c8de68551345421e4f",
+      "size_bytes": 4575
+    },
+    "research058_dependence.csv": {
+      "sha256": "39b07d7234e8c430f3424b8f1c4dd8a921c9a64f5a724ae110864a6e36a153ce",
+      "size_bytes": 580
+    },
+    "research058_exclusions.csv": {
+      "sha256": "de77bf2624d5598852fb11ef9066b0250d482a8e13dedd16dfb8d869132137fd",
+      "size_bytes": 745
+    },
+    "research058_hypotheses.csv": {
+      "sha256": "9739ad10534ead8afd972ed1002a1ea599f5d51064c9e47f34a5fbeb144c0e1f",
+      "size_bytes": 575
+    },
+    "research058_summary.json": {
+      "sha256": "44ee8d743b6f54b97806f7d1f3f577789bcb306a22d7eb60372bc5bfddf1e8f1",
+      "size_bytes": 2597
+    },
+    "research058_year_leave_out.csv": {
+      "sha256": "6bf6f6eb60a8c101d8f73a46736cddffe1a97946205c65b694f2e14f625dc79d",
+      "size_bytes": 417
+    }
+  },
+  "inputs": {
+    "h052_full_window_jump": {
+      "manifest": "results/research052/research052_manifest.json",
+      "manifest_sha256": "9b96667699ff1744a670bce50778598fe04b69f0a1dc48392b5f75d3e7cf1e78",
+      "path": "results/research052/research052_event_portfolio.csv",
+      "sha256": "5200c598f11ec4e927ca70aa60a4ad0d39ae84e67b8310b481f709da4a82edd0",
+      "size_bytes": 7775
+    },
+    "h056_cojump_breadth": {
+      "manifest": "results/research056/research056_manifest.json",
+      "manifest_sha256": "9571f969138ff270d0e0ea3f9b885e98dc2a45163710ce21d4bbf2d0c7a10f5a",
+      "path": "results/research056/research056_events.csv",
+      "sha256": "4edebf1717ffe58309503973ba12f5a7bc6a42c0fb664fb4f1b2682cf9ef905e",
+      "size_bytes": 7760
+    },
+    "h057_delayed_jump": {
+      "manifest": "results/research057/research057_manifest.json",
+      "manifest_sha256": "9c8b58a313cd4a685cb27b643a73d9f6040c7e7df03206a83680d090d5d224a9",
+      "path": "results/research057/research057_event_portfolio.csv",
+      "sha256": "4403c5055f91fb823348768abbf6e174068e754f87b4eed3e8cd15ad6c28d921",
+      "size_bytes": 9391
+    }
+  },
+  "method": {
+    "block_events": 2,
+    "draws": 100000,
+    "primary_adjustment": "Romano-Wolf stepdown max-T one-sided",
+    "seed": 20260930
+  },
+  "preregistered_issue": 75,
+  "research": 58
+}
