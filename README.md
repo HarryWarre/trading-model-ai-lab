@@ -240,3 +240,11 @@ On 54/70 eligible official releases with 14–15 assets and all four families, m
 All eight frozen gates pass. Ridge MAE is 8.2641 bp versus 9.8636 price-only and 8.1896 economic, but Ridge correlation is only +0.0690; do not interpret it as a strong event-level forecast. Eight tests/compile pass and full reruns are byte-identical. This remains **non-directional event-risk evidence, not alpha or a trading strategy**: zero positions, turnover and P&L at 0x/1x/2x/4x costs.
 
 Next priority remains a point-in-time, timestamp-verifiable consensus-surprise source or an independent later panel. Do not retune the five- or thirty-minute boundaries. See the [report](https://github.com/HarryWarre/trading-model-ai-lab/blob/main/research/real_bls_delayed_volatility_2023_2025.md) and [results](https://github.com/HarryWarre/trading-model-ai-lab/tree/main/results/research057).
+
+## Research 058 — joint multiple-testing audit of BLS risk evidence
+
+[Issue #75](https://github.com/HarryWarre/trading-model-ai-lab/issues/75) freezes a three-hypothesis family before joining the event-level outputs from Research 052, 056 and 057. On their exact 51-event common intersection, the full-window jump is +19.0252 bp, timing-safe co-jump breadth is +33.3333 percentage points, and delayed jump is +7.8286 bp.
+
+All three findings survive 100,000-draw shared two-event-block Romano–Wolf stepdown correction: adjusted one-sided p-values are 0.000010, 0.000010 and 0.000030. Holm-adjusted p-values are 0.000030 for all three. Every leave-one-year-out mean remains positive, top-five positive concentration is at most 32.01%, all eight frozen gates pass, six tests/compile pass, and two full runs are byte-identical.
+
+Decision remains **non-directional event-risk evidence only, not alpha or a trading strategy**. The audit creates zero positions, turnover and P&L at 0x/1x/2x/4x cost. Do not add another BLS window or threshold variation. Priority stays on a timestamp-verifiable point-in-time consensus-surprise archive or a hash-verified independent later M1 panel. See the [report](https://github.com/HarryWarre/trading-model-ai-lab/blob/main/research/real_bls_multiple_testing_audit_2023_2025.md) and [results](https://github.com/HarryWarre/trading-model-ai-lab/tree/main/results/research058).
